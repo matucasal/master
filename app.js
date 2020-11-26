@@ -9,6 +9,7 @@ const redis = require("redis");
 const redisClient = redis.createClient();
 const redisController = require('./controllers/redisController');
 
+
 const { use } = require('chai');
 
 mongoose.Promise = global.Promise;
@@ -49,3 +50,5 @@ app.use('/categories', require('./routes/categories'));
 app.use('/questions', require('./routes/questions'));
 
 module.exports = app;
+
+/*prueba*/
