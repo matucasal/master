@@ -1,0 +1,408 @@
+2020-08-01 13:18:02 info [app.js]: Mongodb connection succesfully
+2020-08-01 13:18:02 info [index.js]: Server listening and running at 8000
+2020-08-01 13:19:32 info [app.js]: Mongodb connection succesfully
+2020-08-01 13:19:33 info [index.js]: Server listening and running at 8000
+2020-08-01 13:19:33 info [app.js]: Conectado a Redis Server
+2020-08-01 17:54:30 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 17:54:35 info [app.js]: Mongodb connection succesfully
+2020-08-01 17:54:35 info [index.js]: Server listening and running at 8000
+2020-08-01 17:54:35 info [app.js]: Conectado a Redis Server
+2020-08-01 17:54:35 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 17:54:45 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 17:55:05 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 17:55:44 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 17:56:36 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 17:56:38 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 17:58:12 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 17:58:12 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 17:58:51 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 17:59:00 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 17:59:20 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 17:59:40 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 18:00:20 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 18:00:31 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 18:04:42 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 18:05:06 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 18:50:51 info [app.js]: Mongodb connection succesfully
+2020-08-01 18:50:51 info [index.js]: Server listening and running at 8000
+2020-08-01 18:50:51 info [app.js]: Conectado a Redis Server
+2020-08-01 18:50:58 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 18:51:03 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 18:51:07 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 18:51:11 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 18:51:18 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 18:51:23 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 18:51:27 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 18:51:31 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 18:52:14 info [app.js]: Mongodb connection succesfully
+2020-08-01 18:52:14 info [index.js]: Server listening and running at 8000
+2020-08-01 18:52:14 info [app.js]: Conectado a Redis Server
+2020-08-01 18:52:21 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 18:52:24 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 18:52:27 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 18:52:30 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 18:53:08 info [games.js]: Mongodb inserted action was ok.
+2020-08-01 18:53:46 info [game-manager.js]: Respuesta recibida 3zthop0wr
+2020-08-01 18:53:55 info [game-manager.js]: Respuesta recibida l9yb9or33
+2020-08-01 18:54:04 info [game-manager.js]: Respuesta recibida e01zz71e7
+2020-08-01 18:54:14 info [game-manager.js]: Respuesta recibida qddc8cvvj
+2020-08-01 18:55:20 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 18:55:22 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 18:55:23 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 18:55:46 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 19:12:37 info [app.js]: Mongodb connection succesfully
+2020-08-01 19:12:37 info [index.js]: Server listening and running at 8000
+2020-08-01 19:12:37 info [app.js]: Conectado a Redis Server
+2020-08-01 19:13:09 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:13:29 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 19:13:46 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:13:51 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:13:55 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:14:00 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:14:39 info [games.js]: Mongodb inserted action was ok.
+2020-08-01 19:15:46 info [game-manager.js]: Respuesta recibida cxqrq4z5p
+2020-08-01 19:15:55 info [game-manager.js]: Respuesta recibida 5onq4c0kg
+2020-08-01 19:16:13 info [game-manager.js]: Respuesta recibida 9zsh02d34
+2020-08-01 19:16:23 info [game-manager.js]: Respuesta recibida g08tzkne5
+2020-08-01 19:17:47 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 19:17:49 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:17:53 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:17:55 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 19:18:09 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 19:18:13 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 19:20:09 info [app.js]: Mongodb connection succesfully
+2020-08-01 19:20:09 info [index.js]: Server listening and running at 8000
+2020-08-01 19:20:10 info [app.js]: Conectado a Redis Server
+2020-08-01 19:20:10 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:20:11 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:20:36 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 19:20:36 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 19:20:46 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:20:49 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:20:52 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:20:54 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:21:36 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 19:21:37 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:22:03 info [games.js]: Mongodb inserted action was ok.
+2020-08-01 19:23:53 info [game-manager.js]: Respuesta recibida 4ubwiq004
+2020-08-01 19:24:00 info [game-manager.js]: Respuesta recibida p0fm5vb9l
+2020-08-01 19:24:08 info [game-manager.js]: Respuesta recibida 13hmmi7ok
+2020-08-01 19:24:16 info [game-manager.js]: Respuesta recibida 370g83jdf
+2020-08-01 19:24:38 info [game-manager.js]: Respuesta recibida 4ubwiq004
+2020-08-01 19:24:40 info [game-manager.js]: Respuesta recibida p0fm5vb9l
+2020-08-01 19:24:42 info [game-manager.js]: Respuesta recibida 13hmmi7ok
+2020-08-01 19:24:43 info [game-manager.js]: Respuesta recibida 370g83jdf
+2020-08-01 19:25:33 info [game-manager.js]: Respuesta recibida 4ubwiq004
+2020-08-01 19:25:39 info [game-manager.js]: Respuesta recibida p0fm5vb9l
+2020-08-01 19:25:42 info [game-manager.js]: Respuesta recibida 13hmmi7ok
+2020-08-01 19:25:51 info [game-manager.js]: Respuesta recibida 370g83jdf
+2020-08-01 19:26:45 info [game-manager.js]: Respuesta recibida 4ubwiq004
+2020-08-01 19:26:48 info [game-manager.js]: Respuesta recibida p0fm5vb9l
+2020-08-01 19:26:55 info [game-manager.js]: Respuesta recibida 13hmmi7ok
+2020-08-01 19:26:59 info [game-manager.js]: Respuesta recibida 370g83jdf
+2020-08-01 19:32:48 info [app.js]: Mongodb connection succesfully
+2020-08-01 19:32:48 info [index.js]: Server listening and running at 8000
+2020-08-01 19:32:48 info [app.js]: Conectado a Redis Server
+2020-08-01 19:32:48 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:32:48 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:32:48 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:32:49 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:33:09 info [games.js]: Mongodb inserted action was ok.
+2020-08-01 19:33:41 info [game-manager.js]: Respuesta recibida 4ubwiq004
+2020-08-01 19:33:43 info [game-manager.js]: Respuesta recibida p0fm5vb9l
+2020-08-01 19:33:46 info [game-manager.js]: Respuesta recibida 13hmmi7ok
+2020-08-01 19:33:49 info [game-manager.js]: Respuesta recibida 370g83jdf
+2020-08-01 19:34:55 info [game-manager.js]: Respuesta recibida 4ubwiq004
+2020-08-01 19:34:58 info [game-manager.js]: Respuesta recibida p0fm5vb9l
+2020-08-01 19:35:00 info [game-manager.js]: Respuesta recibida 13hmmi7ok
+2020-08-01 19:35:02 info [game-manager.js]: Respuesta recibida 370g83jdf
+2020-08-01 19:35:56 info [game-manager.js]: Respuesta recibida 4ubwiq004
+2020-08-01 19:36:00 info [game-manager.js]: Respuesta recibida p0fm5vb9l
+2020-08-01 19:36:02 info [game-manager.js]: Respuesta recibida 13hmmi7ok
+2020-08-01 19:36:06 info [game-manager.js]: Respuesta recibida 370g83jdf
+2020-08-01 19:38:13 info [app.js]: Mongodb connection succesfully
+2020-08-01 19:38:13 info [index.js]: Server listening and running at 8000
+2020-08-01 19:38:13 info [app.js]: Conectado a Redis Server
+2020-08-01 19:38:13 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:38:14 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:38:14 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:38:14 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:38:33 info [app.js]: Mongodb connection succesfully
+2020-08-01 19:38:33 info [index.js]: Server listening and running at 8000
+2020-08-01 19:38:33 info [app.js]: Conectado a Redis Server
+2020-08-01 19:38:33 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:38:33 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:38:34 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:38:34 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:40:04 info [app.js]: Mongodb connection succesfully
+2020-08-01 19:40:04 info [index.js]: Server listening and running at 8000
+2020-08-01 19:40:04 info [app.js]: Conectado a Redis Server
+2020-08-01 19:40:04 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:40:04 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:40:04 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:40:05 info [sockets-manager.js]: New connection from::ffff:192.168.1.104
+2020-08-01 19:40:23 info [games.js]: Mongodb inserted action was ok.
+2020-08-01 19:40:54 info [game-manager.js]: Respuesta recibida 4ubwiq004
+2020-08-01 19:40:57 info [game-manager.js]: Respuesta recibida p0fm5vb9l
+2020-08-01 19:41:00 info [game-manager.js]: Respuesta recibida 13hmmi7ok
+2020-08-01 19:41:02 info [game-manager.js]: Respuesta recibida 370g83jdf
+2020-08-01 19:41:26 info [game-manager.js]: Respuesta recibida 4ubwiq004
+2020-08-01 19:41:28 info [game-manager.js]: Respuesta recibida p0fm5vb9l
+2020-08-01 19:41:31 info [game-manager.js]: Respuesta recibida 13hmmi7ok
+2020-08-01 19:41:34 info [game-manager.js]: Respuesta recibida 370g83jdf
+2020-08-01 19:42:01 info [game-manager.js]: Respuesta recibida 4ubwiq004
+2020-08-01 19:42:05 info [game-manager.js]: Respuesta recibida p0fm5vb9l
+2020-08-01 19:42:09 info [game-manager.js]: Respuesta recibida 13hmmi7ok
+2020-08-01 19:42:12 info [game-manager.js]: Respuesta recibida 370g83jdf
+2020-08-01 20:02:39 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 20:02:40 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 20:02:40 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 20:02:40 info [sockets-manager.js]: New disconnection from::ffff:192.168.1.104
+2020-08-01 21:35:10 info [app.js]: Mongodb connection succesfully
+2020-08-01 21:35:11 info [index.js]: Server listening and running at 8000
+2020-08-01 21:35:11 info [app.js]: Conectado a Redis Server
+2020-08-02 20:28:46 info [app.js]: Mongodb connection succesfully
+2020-08-02 20:28:46 info [index.js]: Server listening and running at 8000
+2020-08-02 20:28:46 info [app.js]: Conectado a Redis Server
+2020-08-02 20:29:04 notice [passport.js]: New user login requested from: pepe
+2020-08-02 20:29:04 notice [passport.js]: New user login requested from: pepe
+2020-08-02 20:29:05 notice [users.js]: Marek is logged in
+2020-08-02 20:29:05 notice [users.js]: Marek is logged in
+2020-08-02 20:30:48 notice [passport.js]: New user login requested from: pepe
+2020-08-02 20:30:49 notice [users.js]: Marek is logged in
+2020-08-02 20:30:55 info [sockets-manager.js]: New connection from::ffff:181.114.143.60
+2020-08-02 20:31:33 info [sockets-manager.js]: New disconnection from::ffff:181.114.143.60
+2020-08-02 20:31:52 notice [passport.js]: New user login requested from: pepe
+2020-08-02 20:31:52 notice [users.js]: Marek is logged in
+2020-08-02 20:31:57 info [sockets-manager.js]: New connection from::ffff:181.114.143.60
+2020-08-02 20:32:14 info [sockets-manager.js]: New disconnection from::ffff:181.114.143.60
+2020-08-02 20:32:18 info [app.js]: Mongodb connection succesfully
+2020-08-02 20:32:18 info [index.js]: Server listening and running at 8000
+2020-08-02 20:32:18 info [app.js]: Conectado a Redis Server
+2020-08-02 20:32:33 notice [passport.js]: New user login requested from: pepe
+2020-08-02 20:32:33 notice [users.js]: Marek is logged in
+2020-08-02 20:32:38 info [sockets-manager.js]: New connection from::ffff:181.114.143.60
+2020-08-02 20:32:42 info [sockets-manager.js]: New disconnection from::ffff:181.114.143.60
+2020-08-05 19:23:35 info [app.js]: Mongodb connection succesfully
+2020-08-05 19:23:36 info [index.js]: Server listening and running at 8000
+2020-08-05 19:23:36 info [app.js]: Conectado a Redis Server
+2020-08-11 15:01:59 info [sockets-manager.js]: New connection from::ffff:201.235.133.151
+2020-08-11 15:02:01 info [sockets-manager.js]: New disconnection from::ffff:201.235.133.151
+2020-11-12 17:18:53 info [app.js]: Mongodb connection succesfully
+2020-11-12 17:18:54 info [index.js]: Server listening and running at 8000
+2020-11-12 17:18:54 info [app.js]: Conectado a Redis Server
+2020-11-12 17:44:29 info [app.js]: Mongodb connection succesfully
+2020-11-12 17:44:30 info [index.js]: Server listening and running at 8000
+2020-11-12 17:44:30 info [app.js]: Conectado a Redis Server
+2020-11-12 18:21:42 info [app.js]: Mongodb connection succesfully
+2020-11-12 18:21:43 info [index.js]: Server listening and running at 8000
+2020-11-12 18:21:43 info [app.js]: Conectado a Redis Server
+2020-11-12 18:24:35 info [app.js]: Mongodb connection succesfully
+2020-11-12 18:24:36 info [index.js]: Server listening and running at 8000
+2020-11-12 18:24:36 info [app.js]: Conectado a Redis Server
+2020-11-12 18:33:44 info [app.js]: Mongodb connection succesfully
+2020-11-12 18:33:45 info [index.js]: Server listening and running at 8000
+2020-11-12 18:33:45 info [app.js]: Conectado a Redis Server
+2020-11-12 18:39:00 info [app.js]: Mongodb connection succesfully
+2020-11-12 18:39:01 info [index.js]: Server listening and running at 8000
+2020-11-12 18:39:01 info [app.js]: Conectado a Redis Server
+2020-11-12 19:02:49 info [app.js]: Mongodb connection succesfully
+2020-11-12 19:02:50 info [index.js]: Server listening and running at 8000
+2020-11-12 19:02:50 info [app.js]: Conectado a Redis Server
+2020-11-12 19:12:23 info [app.js]: Mongodb connection succesfully
+2020-11-12 19:12:24 info [index.js]: Server listening and running at 8000
+2020-11-12 19:12:24 info [app.js]: Conectado a Redis Server
+2020-11-12 19:19:47 info [app.js]: Mongodb connection succesfully
+2020-11-12 19:19:48 info [index.js]: Server listening and running at 8000
+2020-11-12 19:19:48 info [app.js]: Conectado a Redis Server
+2020-11-12 19:37:17 info [app.js]: Mongodb connection succesfully
+2020-11-12 19:37:18 info [index.js]: Server listening and running at 8000
+2020-11-12 19:37:18 info [app.js]: Conectado a Redis Server
+2020-11-12 19:45:13 info [app.js]: Mongodb connection succesfully
+2020-11-12 19:45:14 info [index.js]: Server listening and running at 8000
+2020-11-12 19:45:14 info [app.js]: Conectado a Redis Server
+2020-11-20 23:41:56 info [app.js]: Mongodb connection succesfully
+2020-11-20 23:41:57 info [index.js]: Server listening and running at 8000
+2020-11-20 23:41:57 info [app.js]: Conectado a Redis Server
+2020-11-21 03:02:24 info [app.js]: Mongodb connection succesfully
+2020-11-21 03:02:24 info [index.js]: Server listening and running at 8000
+2020-11-21 03:02:25 info [app.js]: Conectado a Redis Server
+2020-11-21 03:10:59 info [app.js]: Mongodb connection succesfully
+2020-11-21 03:10:59 info [index.js]: Server listening and running at 8000
+2020-11-21 03:10:59 info [app.js]: Conectado a Redis Server
+2020-11-21 03:18:32 info [app.js]: Mongodb connection succesfully
+2020-11-21 03:18:32 info [index.js]: Server listening and running at 8000
+2020-11-21 03:18:32 info [app.js]: Conectado a Redis Server
+2020-11-21 03:21:00 info [app.js]: Mongodb connection succesfully
+2020-11-21 03:21:00 info [index.js]: Server listening and running at 8000
+2020-11-21 03:21:00 info [app.js]: Conectado a Redis Server
+2020-11-21 03:25:20 info [app.js]: Mongodb connection succesfully
+2020-11-21 03:25:20 info [index.js]: Server listening and running at 8000
+2020-11-21 03:25:20 info [app.js]: Conectado a Redis Server
+2020-11-21 03:28:02 info [app.js]: Mongodb connection succesfully
+2020-11-21 03:28:02 info [index.js]: Server listening and running at 8000
+2020-11-21 03:28:02 info [app.js]: Conectado a Redis Server
+2020-11-21 03:39:39 info [app.js]: Mongodb connection succesfully
+2020-11-21 03:39:39 info [index.js]: Server listening and running at 8000
+2020-11-21 03:39:39 info [app.js]: Conectado a Redis Server
+2020-11-21 21:12:20 info [app.js]: Mongodb connection succesfully
+2020-11-21 21:12:20 info [index.js]: Server listening and running at 8000
+2020-11-21 21:12:20 info [app.js]: Conectado a Redis Server
+2020-11-22 21:48:54 notice [passport.js]: New user login requested from: pepe
+2020-11-22 21:56:10 info [app.js]: Mongodb connection succesfully
+2020-11-22 21:56:10 info [index.js]: Server listening and running at 8000
+2020-11-22 21:56:10 info [app.js]: Conectado a Redis Server
+2020-11-22 21:56:21 notice [passport.js]: New user login requested from: pepe
+2020-11-22 21:56:21 notice [users.js]: Marek is logged in
+2020-11-22 21:57:49 info [app.js]: Mongodb connection succesfully
+2020-11-22 21:57:49 info [index.js]: Server listening and running at 8000
+2020-11-22 21:57:49 info [app.js]: Conectado a Redis Server
+2020-11-22 21:58:16 notice [passport.js]: New user login requested from: user
+2020-11-22 21:58:23 notice [passport.js]: New user login requested from: user
+2020-11-22 21:58:29 notice [passport.js]: New user login requested from: user
+2020-11-22 21:59:58 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-22 22:00:05 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-22 22:00:17 notice [passport.js]: New user login requested from: info@pipasjourney.com
+2020-11-22 22:00:17 notice [users.js]: dami prueba is logged in
+2020-11-22 22:00:32 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-22 22:04:00 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-22 22:06:25 notice [passport.js]: New user login requested from: a
+2020-11-22 22:06:44 notice [passport.js]: New user login requested from: info@pipasjourney.com
+2020-11-22 22:06:44 notice [users.js]: dami prueba is logged in
+2020-11-22 22:06:47 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-22 22:06:58 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 01:33:07 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-23 01:33:11 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 01:33:27 notice [passport.js]: New user login requested from: bot1
+2020-11-23 01:33:27 notice [users.js]: Bot Roberto is logged in
+2020-11-23 01:33:31 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-23 01:33:34 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 01:35:22 notice [passport.js]: New user login requested from: bot1
+2020-11-23 01:35:22 notice [users.js]: Bot Roberto is logged in
+2020-11-23 01:35:30 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-23 01:35:59 notice [passport.js]: New user login requested from: bot2
+2020-11-23 01:35:59 notice [users.js]: Bot Esponja is logged in
+2020-11-23 01:36:03 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-23 01:36:25 notice [passport.js]: New user login requested from: bot3
+2020-11-23 01:36:25 notice [users.js]: Bot Dylan is logged in
+2020-11-23 01:36:28 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-23 01:37:24 notice [passport.js]: New user login requested from: info@pipasjourney.com
+2020-11-23 01:37:33 notice [passport.js]: New user login requested from: info@pipasjourney.com
+2020-11-23 01:37:33 notice [users.js]: dami prueba is logged in
+2020-11-23 01:37:37 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-23 01:37:39 info [games.js]: Mongodb inserted action was ok.
+2020-11-23 01:51:13 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 01:51:23 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-23 01:51:27 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 01:52:33 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 01:52:36 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 01:52:38 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 01:52:51 notice [passport.js]: New user login requested from: bot1
+2020-11-23 01:52:51 notice [users.js]: Bot Roberto is logged in
+2020-11-23 01:52:57 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-23 01:53:05 notice [passport.js]: New user login requested from: bot2
+2020-11-23 01:53:05 notice [users.js]: Bot Esponja is logged in
+2020-11-23 01:53:12 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-23 01:53:22 notice [passport.js]: New user login requested from: bot3
+2020-11-23 01:53:23 notice [users.js]: Bot Dylan is logged in
+2020-11-23 01:53:33 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-23 01:53:34 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-23 01:53:35 info [games.js]: Mongodb inserted action was ok.
+2020-11-23 01:53:52 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 01:53:57 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 01:53:59 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 01:54:00 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 01:54:47 notice [passport.js]: New user login requested from: bot1
+2020-11-23 01:54:47 notice [users.js]: Bot Roberto is logged in
+2020-11-23 01:54:50 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-23 01:55:23 notice [passport.js]: New user login requested from: bot2
+2020-11-23 01:55:23 notice [users.js]: Bot Esponja is logged in
+2020-11-23 01:55:28 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-23 01:55:41 notice [passport.js]: New user login requested from: bot3
+2020-11-23 01:55:41 notice [users.js]: Bot Dylan is logged in
+2020-11-23 01:55:44 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-23 01:56:05 notice [passport.js]: New user login requested from: info@pipasjourney.com
+2020-11-23 01:56:05 notice [users.js]: dami prueba is logged in
+2020-11-23 01:56:07 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-23 01:56:09 info [games.js]: Mongodb inserted action was ok.
+2020-11-23 01:56:22 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 01:57:56 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 01:57:57 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 01:57:59 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 01:58:46 notice [passport.js]: New user login requested from: bot1
+2020-11-23 01:58:46 notice [users.js]: Bot Roberto is logged in
+2020-11-23 01:59:02 notice [passport.js]: New user login requested from: bot2
+2020-11-23 01:59:02 notice [users.js]: Bot Esponja is logged in
+2020-11-23 01:59:04 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-23 01:59:07 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-23 01:59:52 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 01:59:58 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 02:00:43 notice [passport.js]: New user login requested from: bot1
+2020-11-23 02:00:44 notice [users.js]: Bot Roberto is logged in
+2020-11-23 02:00:46 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-23 02:00:56 notice [passport.js]: New user login requested from: bot2
+2020-11-23 02:00:56 notice [users.js]: Bot Esponja is logged in
+2020-11-23 02:00:58 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-23 02:01:09 notice [passport.js]: New user login requested from: bot3
+2020-11-23 02:01:09 notice [users.js]: Bot Dylan is logged in
+2020-11-23 02:01:11 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-23 02:01:26 notice [passport.js]: New user login requested from: info@pipasjourney.com
+2020-11-23 02:01:26 notice [users.js]: dami prueba is logged in
+2020-11-23 02:01:28 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-23 02:01:30 info [games.js]: Mongodb inserted action was ok.
+2020-11-23 02:01:43 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 02:03:01 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 02:03:09 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 02:03:18 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 02:32:10 notice [passport.js]: New user login requested from: info@pipasjourney.com
+2020-11-23 02:32:10 notice [users.js]: dami prueba is logged in
+2020-11-23 02:32:34 notice [passport.js]: New user login requested from: info@pipasjourney.com
+2020-11-23 02:32:34 notice [users.js]: dami prueba is logged in
+2020-11-23 02:34:49 notice [passport.js]: New user login requested from: info@pipasjourney.com
+2020-11-23 02:34:49 notice [users.js]: dami prueba is logged in
+2020-11-23 02:35:35 notice [passport.js]: New user login requested from: info@pipasjourney.com
+2020-11-23 02:35:35 notice [users.js]: dami prueba is logged in
+2020-11-23 02:38:28 notice [passport.js]: New user login requested from: info@pipasjourney.com
+2020-11-23 02:38:28 notice [users.js]: dami prueba is logged in
+2020-11-23 02:38:35 notice [passport.js]: New user login requested from: info@pipasjourney.com
+2020-11-23 02:38:35 notice [users.js]: dami prueba is logged in
+2020-11-23 02:42:55 notice [passport.js]: New user login requested from: info@pipasjourney.com
+2020-11-23 02:42:55 notice [users.js]: dami prueba is logged in
+2020-11-23 02:55:40 notice [passport.js]: New user login requested from: info@pipasjourney.com
+2020-11-23 02:55:40 notice [users.js]: dami prueba is logged in
+2020-11-23 02:59:19 notice [passport.js]: New user login requested from: info@pipasjourney.com
+2020-11-23 02:59:19 notice [users.js]: dami prueba is logged in
+2020-11-23 02:59:22 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-23 02:59:34 notice [passport.js]: New user login requested from: bot1
+2020-11-23 02:59:52 notice [passport.js]: New user login requested from: bot1
+2020-11-23 03:00:05 notice [passport.js]: New user login requested from: bot1
+2020-11-23 03:00:11 notice [passport.js]: New user login requested from: bot1
+2020-11-23 03:00:11 notice [users.js]: Bot Roberto is logged in
+2020-11-23 03:00:18 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-23 03:00:18 notice [passport.js]: New user login requested from: bot2
+2020-11-23 03:00:18 notice [users.js]: Bot Esponja is logged in
+2020-11-23 03:00:23 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-23 03:00:35 notice [passport.js]: New user login requested from: bot3
+2020-11-23 03:00:35 notice [users.js]: Bot Dylan is logged in
+2020-11-23 03:00:38 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-23 03:00:40 info [games.js]: Mongodb inserted action was ok.
+2020-11-23 03:07:08 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 03:07:13 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 03:07:14 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 03:07:16 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 19:16:32 info [sockets-manager.js]: New connection from::ffff:190.193.88.44
+2020-11-23 19:30:29 info [sockets-manager.js]: New disconnection from::ffff:190.193.88.44
+2020-11-23 21:19:58 info [sockets-manager.js]: New connection from::ffff:181.114.143.60
+2020-11-23 21:20:39 info [sockets-manager.js]: New disconnection from::ffff:181.114.143.60
+2020-11-25 21:55:02 info [app.js]: Mongodb connection succesfully
+2020-11-25 21:55:02 info [index.js]: Server listening and running at 8000
+2020-11-25 21:55:02 info [app.js]: Conectado a Redis Server
+2020-11-25 21:59:30 info [app.js]: Mongodb connection succesfully
+2020-11-25 21:59:30 info [index.js]: Server listening and running at 8000
+2020-11-25 21:59:30 info [app.js]: Conectado a Redis Server
+2020-11-25 22:00:39 info [app.js]: Mongodb connection succesfully
+2020-11-25 22:00:39 info [index.js]: Server listening and running at 8000
+2020-11-25 22:00:39 info [app.js]: Conectado a Redis Server
+2020-11-25 22:01:19 info [app.js]: Mongodb connection succesfully
+2020-11-25 22:01:19 info [index.js]: Server listening and running at 8000
+2020-11-25 22:01:19 info [app.js]: Conectado a Redis Server
