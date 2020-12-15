@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === 'test') {
   logger.info("Mongodb connection succesfully");
 }
 
-redisClient.on('connect', function() {
+redisClient.on('connect', function () {
   logger.info('Conectado a Redis Server');
   redisController.setClient(redisClient);
 });
@@ -42,7 +42,7 @@ app.get('/', (req, res) => {
   console.log(req.header('x-forwarded-for') || req.connection.remoteAddress);
   res.sendFile(path.join(__dirname + '/client/front/dist/front/index.html'));
 });
-  
+
 
 // Routes
 app.use('/users', require('./routes/users'));

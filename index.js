@@ -1,7 +1,7 @@
 const app = require('./app');
 const socket = require('socket.io')({
-    transports: ['websocket']
-  });
+  transports: ['websocket']
+});
 const socketEvents = require('./controllers/gameplay/sockets-manager');
 const logger = require('./configuration/logger')(__filename);
 

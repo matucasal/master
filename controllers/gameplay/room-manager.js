@@ -7,27 +7,27 @@ const logger = require('../../configuration/logger')(__filename);
 
 var gameRooms = [];
 //Se crean las primeras rooms
-gameRooms.push({'id': uniqid(), 'books':1000, 'level': 'Neofito', 'max': 4, 'inside': 0, 'users':[], 'jackpot': 0, 'won': {}});
-gameRooms.push({'id': uniqid(), 'books':1000, 'level': 'Virtuoso', 'max': 4, 'inside': 0, 'users':[], 'jackpot': 0, 'won': {}});
-gameRooms.push({'id': uniqid(), 'books':1000, 'level': 'Serafin', 'max': 4, 'inside': 0, 'users':[], 'jackpot': 0, 'won': {}});
+gameRooms.push({ 'id': uniqid(), 'books': 1000, 'level': 'Neofito', 'max': 4, 'inside': 0, 'users': [], 'jackpot': 0, 'won': {} });
+gameRooms.push({ 'id': uniqid(), 'books': 1000, 'level': 'Virtuoso', 'max': 4, 'inside': 0, 'users': [], 'jackpot': 0, 'won': {} });
+gameRooms.push({ 'id': uniqid(), 'books': 1000, 'level': 'Serafin', 'max': 4, 'inside': 0, 'users': [], 'jackpot': 0, 'won': {} });
 
-function newRoom(level){
-    gameRooms.push({'id': uniqid(), 'books':1000, 'level': level, 'max': 4, 'inside': 0, 'users':[], 'jackpot': 0, 'won': {}});
+function newRoom(level) {
+    gameRooms.push({ 'id': uniqid(), 'books': 1000, 'level': level, 'max': 4, 'inside': 0, 'users': [], 'jackpot': 0, 'won': {} });
 }
 
-function deleteRoom(romID){
+function deleteRoom(romID) {
     var index = gameRooms.findIndex(x => x.id === romID);
     gameRooms.splice(index, 1);
 }
 
-function addUserRoom(roomID, user, socketID){
+function addUserRoom(roomID, user, socketID) {
     user.socketID = socketID;
     let index = gameRooms.findIndex(x => x.id === roomID);
     user.books = gameRooms[index].books;
     if (gameRooms[index].inside == 0) {
         user.turn = 1;
-        gameRooms[index].users.push(user);    
-    }else{
+        gameRooms[index].users.push(user);
+    } else {
         user.turn = gameRooms[index].users.length + 1;
         gameRooms[index].users.push(user);
     }
@@ -40,13 +40,13 @@ function addUserRoom(roomID, user, socketID){
         this.newRoom(gameRooms[index].level);
         gameRooms.splice(index, 1);
         return room;
-    }else{
+    } else {
         return gameRooms[index];
     }
-    
+
 }
 
-function delUserRoom(roomID, socket){
+function delUserRoom(roomID, socket) {
     let index = gameRooms.findIndex(x => x.id === roomID);
     if (index != -1) {
         console.log(index);
@@ -56,19 +56,19 @@ function delUserRoom(roomID, socket){
             if (gameRooms[index].users[i].socketID == socket) {
                 indexUser = i
                 break;
-            }        
+            }
         }
         for (let indexTurn = indexUser + 1; indexTurn < gameRooms[index].users.length; indexTurn++) {
-            gameRooms[index].users[indexTurn].turn = gameRooms[index].users[indexTurn].turn -1;
+            gameRooms[index].users[indexTurn].turn = gameRooms[index].users[indexTurn].turn - 1;
         }
-        gameRooms[index].users.splice(indexUser,1);
+        gameRooms[index].users.splice(indexUser, 1);
         gameRooms[index].inside = gameRooms[index].users.length;
         return gameRooms[index].id;
     }
     return false;
 }
 
-function searchRooms(level){
+function searchRooms(level) {
 
     var roomsResult = [];
     for (let index = 0; index < gameRooms.length; index++) {
@@ -80,7 +80,7 @@ function searchRooms(level){
     return roomsResult;
 }
 
-function searchRoomByID(roomID){
+function searchRoomByID(roomID) {
     return gameRooms.find(x => x.id == roomID);
 }
 

@@ -4,16 +4,16 @@ const Schema = mongoose.Schema;
 
 // Create a schema
 const userSchema = new Schema({
-  books: { type: Number, default: 1000},
+  books: { type: Number, default: 1000 },
   level: { type: String },
   avatar: {
-    peinado: { type: String } ,
+    peinado: { type: String },
     rostro: { type: String },
-    ojo_izquierdo: { type: String},
+    ojo_izquierdo: { type: String },
     ojo_derecho: { type: String },
     boca: { type: String },
-    nariz: { type: String},
-    cuerpo: { type: String}
+    nariz: { type: String },
+    cuerpo: { type: String }
   },
   animations: {
     anim_inicio: { type: String },
@@ -21,7 +21,7 @@ const userSchema = new Schema({
     anim_gano: { type: String },
     anim_perdio: { type: String }
   },
-  gamesPlayed: { type: Number, default: 0},
+  gamesPlayed: { type: Number, default: 0 },
   gamesWon: { type: Number, default: 0 },
   gamesLost: { type: Number, default: 0 },
   favoriteCategory: { type: String },
@@ -35,16 +35,16 @@ const userSchema = new Schema({
       type: String,
       lowercase: true
     },
-    password: { 
+    password: {
       type: String
     },
-    name: { 
+    name: {
       type: String
     },
-    fechaNacimiento: { 
+    fechaNacimiento: {
       type: String
     },
-    sexo: { 
+    sexo: {
       type: String
     },
 
@@ -65,7 +65,7 @@ const userSchema = new Schema({
   }
 });
 
-userSchema.pre('save', async function(next) {
+userSchema.pre('save', async function (next) {
   try {
     if (this.method !== 'local') {
       next();
@@ -78,15 +78,15 @@ userSchema.pre('save', async function(next) {
     // Re-assign hashed version over original, plain text password
     this.local.password = passwordHash;
     next();
-  } catch(error) {
+  } catch (error) {
     next(error);
   }
 });
 
-userSchema.methods.isValidPassword = async function(newPassword) {
+userSchema.methods.isValidPassword = async function (newPassword) {
   try {
     return await bcrypt.compare(newPassword, this.local.password);
-  } catch(error) {
+  } catch (error) {
     throw new Error(error);
   }
 }
