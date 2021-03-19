@@ -198,7 +198,9 @@ async function one2oneAnswer(data) {
         io.sockets.in(data.roomID).emit('userDone', JSON.stringify({ 'userID': data.userID, 'answer': data.answer, 'timeResponse': data.timeResponse }));
         let answerSelected = { "socketID": socket.id, "userID": data.userID, "answer": data.answer };
         let result = await gameManager.one2oneAnswer(answerSelected, data.roomID);
-        //Faltan responder users?
+        //Faltan responder users? -> todavia nada
+
+        //El resulto me trae o vacio o la nueva ronda 
         if (result != false) {
             let question = await gameManager.one2oneQuestion(data.roomID, result);
             io.sockets.in(data.roomID).emit('question', JSON.stringify(question));

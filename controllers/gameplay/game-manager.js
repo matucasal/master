@@ -177,10 +177,13 @@ function newAnswer(answer, roomID) {
             console.log("----No hubo ningún ganador en esta ronda----");
 
             Object.keys(userList).forEach(function (key) {
-
+                //le resto los libros dentro de la ronda
                 gamePlaying[roomID].rounds[gamePlaying[roomID].rounds.length - 1].users[userList[key].socketID].books -= parseInt(userList[userList[key].socketID].bet);
+                //le resto los libros al jugador
                 gamePlaying[roomID].users[userList[key].socketID].books -= parseInt(userList[userList[key].socketID].bet);
+                //sumo todos los libros al jackpot
                 jackpot += parseInt(userList[userList[key].socketID].bet);
+                //Si uno se queda con 0 o menos -> arafue
                 if (gamePlaying[roomID].users[userList[key].socketID].books <= 0) {
                     //Game over para el player
                     response.usersGameOver.push(gamePlaying[roomID].users[userList[key].socketID]);
@@ -189,6 +192,7 @@ function newAnswer(answer, roomID) {
                 }
 
             });
+            //Mando el jackpot al room 
             gamePlaying[roomID].jackpot += jackpot;
             let newRound = createRound(gamePlaying[roomID].rounds[gamePlaying[roomID].rounds.length - 1].users, roomID, false);
             gamePlaying[roomID].rounds.push(newRound);
@@ -399,6 +403,7 @@ function createRound(users, roomID, isNewRound) {
     return round;
 }
 
+//El createone2one arranca cuando en el useranswer quedan solo 2 pjs
 function createOne2One(users, roomID) {
     let one2one = {};
     let newUsers = JSON.parse(JSON.stringify(users));
@@ -408,9 +413,11 @@ function createOne2One(users, roomID) {
         newUsers[key].countCorrect = 0;
     });
     one2one.currentRound = 0;
+    //ready -> cuenta cuantos usuarios estan para el one2one
     one2one.ready = 0;
     one2one.jackpot = gamePlaying[roomID].jackpot;
     one2one.rounds = [];
+    //itera todas las categorias y va creando una ronda vacia para cada una 
     for (let index = 0; index < categories.length; index++) {
         let round = {}
         round.category = categories[index];

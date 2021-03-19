@@ -406,3 +406,321 @@
 2020-11-25 22:01:19 info [app.js]: Mongodb connection succesfully
 2020-11-25 22:01:19 info [index.js]: Server listening and running at 8000
 2020-11-25 22:01:19 info [app.js]: Conectado a Redis Server
+2021-01-19 18:28:02 info [app.js]: Mongodb connection succesfully
+2021-01-19 18:28:02 info [index.js]: Server listening and running at 8000
+2021-01-19 18:28:02 info [app.js]: Conectado a Redis Server
+2021-01-19 18:28:02 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-19 18:29:12 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-19 18:29:14 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-19 18:30:10 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-19 18:30:12 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-19 18:42:18 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-19 18:42:19 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-19 18:45:33 notice [passport.js]: New user login requested from: admin
+2021-01-19 18:46:47 notice [passport.js]: New user login requested from: admin
+2021-01-19 18:47:54 notice [passport.js]: New user login requested from: juanca
+2021-01-19 18:47:59 notice [passport.js]: New user login requested from: juanca
+2021-01-19 18:56:02 notice [passport.js]: New user login requested from: fede
+2021-01-19 18:56:03 notice [users.js]: fede is logged in
+2021-01-19 19:01:36 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-19 19:01:38 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-19 19:05:09 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-19 19:05:11 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-19 19:09:03 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-22 00:11:40 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-22 00:11:46 notice [passport.js]: New user login requested from: fede
+2021-01-22 00:11:46 notice [users.js]: fede is logged in
+2021-01-22 00:12:16 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-22 00:12:18 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-22 00:12:23 notice [passport.js]: New user login requested from: fede
+2021-01-22 00:12:23 notice [users.js]: fede is logged in
+2021-01-22 00:12:39 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-22 00:12:41 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-22 00:12:43 notice [passport.js]: New user login requested from: fede
+2021-01-22 00:12:43 notice [users.js]: fede is logged in
+2021-01-22 00:12:59 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-22 00:13:00 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-22 00:30:00 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-22 00:30:01 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-22 00:30:48 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-22 00:32:06 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-22 00:33:49 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-22 00:33:50 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-22 00:34:58 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-22 00:34:59 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-22 00:35:11 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-22 00:35:12 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-22 00:35:17 notice [passport.js]: New user login requested from: fede
+2021-01-22 00:35:17 notice [users.js]: fede is logged in
+2021-01-22 00:35:40 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-22 00:35:42 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-22 00:35:46 notice [passport.js]: New user login requested from: fede
+2021-01-22 00:35:46 notice [users.js]: fede is logged in
+2021-01-22 00:37:09 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-22 00:37:11 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-22 00:37:17 notice [passport.js]: New user login requested from: fede
+2021-01-22 00:37:17 notice [users.js]: fede is logged in
+2021-01-22 00:38:21 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-22 00:38:23 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-22 00:57:09 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-22 00:57:33 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-22 00:57:39 notice [passport.js]: New user login requested from: fede
+2021-01-22 00:57:39 notice [users.js]: fede is logged in
+2021-01-22 00:58:06 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-22 00:58:07 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-22 02:10:39 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:19:16 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:19:29 notice [passport.js]: New user login requested from: fede
+2021-01-25 17:19:29 notice [users.js]: fede is logged in
+2021-01-25 17:21:57 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:21:58 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:23:02 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:23:03 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:23:17 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:23:19 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:23:40 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:23:44 notice [passport.js]: New user login requested from: fede
+2021-01-25 17:23:44 notice [users.js]: fede is logged in
+2021-01-25 17:24:03 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:24:03 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:24:05 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:24:06 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:24:17 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:24:23 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:24:29 notice [passport.js]: New user login requested from: fede
+2021-01-25 17:24:29 notice [users.js]: fede is logged in
+2021-01-25 17:24:49 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:24:50 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:24:52 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:24:52 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:25:02 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:25:15 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:25:16 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:25:20 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:25:21 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:26:04 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:26:06 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:26:06 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:26:08 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:26:25 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:26:27 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:26:38 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:26:39 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:26:56 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:26:57 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:27:02 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:27:03 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:27:44 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:27:45 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:27:46 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:27:47 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:27:50 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:27:51 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:28:05 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:28:06 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:28:17 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:28:19 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:28:20 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:28:21 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:28:37 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:28:43 notice [passport.js]: New user login requested from: fede
+2021-01-25 17:28:43 notice [users.js]: fede is logged in
+2021-01-25 17:29:59 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:30:55 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:30:56 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:31:41 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:31:45 notice [passport.js]: New user login requested from: fede
+2021-01-25 17:31:45 notice [users.js]: fede is logged in
+2021-01-25 17:32:21 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:32:21 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:32:24 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:32:24 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:32:59 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:32:59 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:33:01 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:33:01 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:33:23 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:33:23 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:33:25 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:33:25 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:33:51 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:33:51 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:33:53 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:33:54 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:34:08 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:34:09 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:34:11 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:34:11 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:34:18 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:34:24 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:34:37 notice [passport.js]: New user login requested from: fede
+2021-01-25 17:34:37 notice [users.js]: fede is logged in
+2021-01-25 17:35:59 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:35:59 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:36:01 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:36:01 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 17:36:11 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 17:36:14 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:44:48 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:44:56 notice [passport.js]: New user login requested from: fede
+2021-01-25 18:44:56 notice [users.js]: fede is logged in
+2021-01-25 18:45:32 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:45:34 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:45:34 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:45:42 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:45:47 notice [passport.js]: New user login requested from: fede
+2021-01-25 18:45:47 notice [users.js]: fede is logged in
+2021-01-25 18:46:48 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:46:50 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:46:50 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:46:56 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:47:01 notice [passport.js]: New user login requested from: fede
+2021-01-25 18:47:01 notice [users.js]: fede is logged in
+2021-01-25 18:48:15 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:48:16 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:48:21 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:48:22 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:48:44 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:48:45 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:49:34 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:49:35 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:50:16 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:50:18 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:50:21 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:50:23 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:50:54 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:50:55 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:50:56 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:50:57 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:51:15 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:51:18 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:51:19 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:51:20 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:51:21 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:51:23 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:51:35 notice [passport.js]: New user login requested from: fede
+2021-01-25 18:51:35 notice [users.js]: fede is logged in
+2021-01-25 18:51:40 notice [passport.js]: New user login requested from: nico
+2021-01-25 18:51:40 notice [users.js]: Nico is logged in
+2021-01-25 18:51:45 notice [passport.js]: New user login requested from: marek
+2021-01-25 18:51:49 notice [passport.js]: New user login requested from: marek
+2021-01-25 18:51:52 notice [passport.js]: New user login requested from: marek
+2021-01-25 18:51:57 notice [passport.js]: New user login requested from: mati
+2021-01-25 18:52:06 notice [passport.js]: New user login requested from: mati
+2021-01-25 18:52:08 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:52:08 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:53:34 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:53:35 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:53:35 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:53:37 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:53:37 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:53:38 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:54:23 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:54:23 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:54:23 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:54:26 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:54:27 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:54:27 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:54:41 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:54:41 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:54:41 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:54:45 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:54:45 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:54:45 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:54:50 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:54:50 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:54:50 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:54:53 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:54:53 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:54:54 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:54:59 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:55:01 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:55:01 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:55:06 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:55:12 notice [passport.js]: New user login requested from: fede
+2021-01-25 18:55:12 notice [users.js]: fede is logged in
+2021-01-25 18:55:40 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:55:41 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:55:45 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:55:53 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:55:59 notice [passport.js]: New user login requested from: fede
+2021-01-25 18:56:00 notice [users.js]: fede is logged in
+2021-01-25 18:56:21 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:56:24 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:56:30 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:56:34 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 18:57:16 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-25 18:57:26 notice [passport.js]: New user login requested from: marek
+2021-01-25 18:57:29 notice [passport.js]: New user login requested from: nico
+2021-01-25 18:57:29 notice [users.js]: Nico is logged in
+2021-01-25 19:10:46 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-25 19:10:46 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-27 14:33:40 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-27 14:33:59 notice [passport.js]: New user login requested from: fede
+2021-01-27 14:33:59 notice [users.js]: fede is logged in
+2021-01-27 14:34:22 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-27 14:34:31 notice [passport.js]: New user login requested from: mati
+2021-01-27 14:34:36 notice [passport.js]: New user login requested from: mati
+2021-01-27 14:34:46 notice [passport.js]: New user login requested from: abc
+2021-01-27 14:34:53 notice [passport.js]: New user login requested from: abc
+2021-01-27 14:35:05 notice [passport.js]: New user login requested from: juanca@juanca.com
+2021-01-27 14:35:05 notice [users.js]: juanca is logged in
+2021-01-27 14:35:37 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-27 14:36:08 notice [passport.js]: New user login requested from: pepe@pepe.com
+2021-01-27 14:36:08 notice [passport.js]: New user login requested from: pepe@pepe.com
+2021-01-27 14:36:08 notice [passport.js]: New user login requested from: pepe@pepe.com
+2021-01-27 14:36:08 notice [passport.js]: New user login requested from: pepe@pepe.com
+2021-01-27 14:36:09 notice [users.js]: pepe is logged in
+2021-01-27 14:36:10 notice [passport.js]: New user login requested from: bot1
+2021-01-27 14:36:10 notice [users.js]: Bot Roberto is logged in
+2021-01-27 14:36:51 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-27 14:37:00 notice [passport.js]: New user login requested from: bot2
+2021-01-27 14:37:00 notice [users.js]: Bot Esponja is logged in
+2021-01-27 14:37:19 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-27 14:37:47 notice [passport.js]: New user login requested from: nico
+2021-01-27 14:37:47 notice [users.js]: Nico is logged in
+2021-01-27 14:37:57 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-27 14:38:08 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-27 14:38:12 notice [passport.js]: New user login requested from: pepe
+2021-01-27 14:38:12 notice [users.js]: Marek is logged in
+2021-01-27 14:38:43 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-27 14:38:48 notice [passport.js]: New user login requested from: marekche@hotmail.com
+2021-01-27 14:38:53 notice [passport.js]: New user login requested from: marekche@hotmail.com
+2021-01-27 14:39:00 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-27 14:40:44 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-01-27 14:40:50 notice [passport.js]: New user login requested from: mati
+2021-01-27 14:40:56 notice [passport.js]: New user login requested from: mati@mati.com
+2021-01-27 14:41:02 notice [passport.js]: New user login requested from: mati@mati.com
+2021-01-27 14:41:05 notice [passport.js]: New user login requested from: mati@mati.com
+2021-01-27 14:42:09 notice [passport.js]: New user login requested from: abc1
+2021-01-27 14:42:09 notice [users.js]: abc1 is logged in
+2021-01-27 14:47:05 info [games.js]: Mongodb inserted action was ok.
+2021-01-27 14:48:31 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-27 14:48:52 info [game-manager.js]: Respuesta recibida 5f19d7d39c945505402cf2ce
+2021-01-27 14:48:58 info [game-manager.js]: Respuesta recibida 5fbb118355a4961a901a0787
+2021-01-27 14:49:03 info [game-manager.js]: Respuesta recibida 5f170c6a484dcf0243f7a6be
+2021-01-27 14:49:07 info [game-manager.js]: Respuesta recibida 5f1759e0484dcf0243f7a6bf
+2021-01-27 14:50:51 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-27 14:50:51 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-27 14:50:51 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-27 14:50:51 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-01-27 14:50:51 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-02-09 14:34:13 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-02-09 14:37:04 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-02-09 14:37:14 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-02-09 14:37:15 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-02-09 14:39:21 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-02-09 14:39:22 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-02-09 14:39:23 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-02-09 14:39:24 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-02-09 14:46:01 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-02-09 14:46:01 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-02-09 15:01:45 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-02-09 15:03:34 info [sockets-manager.js]: New connection from::ffff:200.126.210.247
+2021-02-09 16:05:49 info [sockets-manager.js]: New disconnection from::ffff:200.126.210.247
+2021-02-09 18:50:07 notice [passport.js]: New user login requested from: matias
+2021-02-09 18:50:16 notice [passport.js]: New user login requested from: matias
+2021-02-09 18:50:44 notice [passport.js]: New user login requested from: nico
+2021-02-09 18:50:44 notice [users.js]: Nico is logged in
+2021-02-09 18:55:53 notice [passport.js]: New user login requested from: nico
+2021-02-09 18:55:53 notice [users.js]: Nico is logged in

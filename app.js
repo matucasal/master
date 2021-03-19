@@ -1,4 +1,5 @@
 const express = require('express');
+var cors = require('cors')
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -27,6 +28,7 @@ redisClient.on('connect', function () {
 });
 
 const app = express();
+app.use(cors());
 
 // Middlewares moved morgan into if for clear tests
 if (!process.env.NODE_ENV === 'test') {
@@ -35,12 +37,14 @@ if (!process.env.NODE_ENV === 'test') {
 
 app.use(bodyParser.json());
 //app.use(express.static(__dirname + '/client/front/dist/front')); // Provide static directory for frontend
-app.use(express.static(__dirname + '/resources/images/avatars'));
+//app.use(express.static(__dirname + '/resources/images/avatars'));
+app.use(express.static(__dirname + '/public'));
 
 // Connect server to Angular 2 Index.html
 app.get('/', (req, res) => {
   console.log(req.header('x-forwarded-for') || req.connection.remoteAddress);
-  res.sendFile(path.join(__dirname + '/client/front/dist/front/index.html'));
+  //res.sendFile(path.join(__dirname + '/client/front/dist/front/index.html'));
+  res.sendFile(path.join(__dirname + '/public/index.html'));
 });
 
 
