@@ -29,8 +29,11 @@ exports = module.exports = function (ios) {
         socket.on('join', userJoined);
         socket.on('userBet', userBet);
         socket.on('userAnswer', userAnswer);
-        socket.on('one2oneReady', one2oneReady);
-        socket.on('one2oneAnswer', one2oneAnswer);
+        //Workflow del duelo
+        socket.on('duelAccept',userAcceptDuel);
+        socket.on('duelAnswer',userAnswerDuel);
+        //socket.on('one2oneReady', one2oneReady);
+        //socket.on('one2oneAnswer', one2oneAnswer);
         socket.on('disconnecting', userDisconnecting);
         socket.on('disconnect', userDisconnect);
         /*setTimeout(function(){
@@ -147,7 +150,7 @@ async function userAnswer(data) {
                     removeUserInRoom(result.usersGameOver, data.roomID);
                 }
                 if (result.isOne2One) {
-                    io.sockets.in(data.roomID).emit('one2one', true);
+                    io.sockets.in(data.roomID).emit('duelNotice', data.roomID);
                     return;
                 }
                 if (result.gameFinished) {
@@ -175,13 +178,14 @@ async function userAnswer(data) {
 /**
  * @param {{roomID: string, userID: string}} data
  */
-async function one2oneReady(data) {
+async function userAcceptDuel(data) {
     var socket = this;
     if (socket.auth) {
         let result = await gameManager.ready(data.roomID, data.userID);
         if (result) {
-            let question = await gameManager.one2oneQuestion(data.roomID, 0);
-            io.sockets.in(data.roomID).emit('question', JSON.stringify(question));
+            let question = await gameManager.one2oneQuestion(data.roomID, 0, function(result){
+                io.sockets.in(data.roomID).emit('duelQuestion', JSON.stringify(result));
+            });
         }
     } else {
         socket.emit("authenticated", false);
@@ -191,7 +195,7 @@ async function one2oneReady(data) {
 /**
  * @param {{answer: String , roomID: string, timeResponse: Number, userID: string}} data
  */
-async function one2oneAnswer(data) {
+async function userAnswerDuel(data) {
     var socket = this;
     if (socket.auth) {
         //Enviar a todos los que estan en la room que alguien ya respondió
@@ -202,8 +206,9 @@ async function one2oneAnswer(data) {
 
         //El resulto me trae o vacio o la nueva ronda 
         if (result != false) {
-            let question = await gameManager.one2oneQuestion(data.roomID, result);
-            io.sockets.in(data.roomID).emit('question', JSON.stringify(question));
+            let question = await gameManager.one2oneQuestion(data.roomID, 0, function(result){
+                io.sockets.in(data.roomID).emit('duelQuestion', JSON.stringify(result));
+            });
         }
     } else {
         socket.emit("authenticated", false);
