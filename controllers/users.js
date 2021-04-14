@@ -22,7 +22,6 @@ module.exports = {
 
   signUp: async (req, res, next) => {
     const { email, password, name } = req.body;
-
     // Check if there is a user with the same email
     const foundUser = await User.findOne({ "local.email": email });
     if (foundUser) { 
@@ -41,6 +40,7 @@ module.exports = {
       level: "Neofito"
     });
 
+
     await newUser.save(function(err,user) {
 
       if(user){
@@ -49,6 +49,7 @@ module.exports = {
         // Respond with token
         res.status(200).json({ "userID": user.id ,"token": token});
       }else{
+        console.log("err", err)
         res.status(409).send("something wrong");
       }
 
