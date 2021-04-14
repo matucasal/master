@@ -433,16 +433,20 @@ function createOne2One(users, roomID) {
 /**
  * @param {{roomID: string, userID: string}} data
  */
-function ready(data) {
-    gamePlaying[data.roomID].one2one.ready += 1;
-    if (gamePlaying[data.roomID].one2one.ready == 2) {
+function ready(roomID, userID) {
+    console.log('roomID', roomID)
+    console.log('userID', userID)
+    console.log('gamePlaying[roomID]' , gamePlaying[roomID])
+
+    gamePlaying[roomID].one2one.ready += 1;
+    if (gamePlaying[roomID].one2one.ready == 2) {
         return startOne2One = true;
     } else {
         return startOne2One = false;
     }
 }
 
-function one2oneQuestion(roomID, indexRound) {
+function one2oneQuestion(roomID, indexRound, callback) {
 
     Question.getQuestion(gamePlaying[roomID].one2one.rounds[indexRound].category, 1, function (result) {
         if (result) {
