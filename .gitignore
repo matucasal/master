@@ -106,7 +106,9 @@ dist
 
 # Cambios locales
 app.js
-configuration/database.js
 
-#Public
-public/
+#Archivo de base de datos
+configuration/*
+
+#Publico
+public/*
