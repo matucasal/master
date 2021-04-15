@@ -1,7 +1,7 @@
 const express = require('express');
 var cors = require('cors')
 const morgan = require('morgan');
-const bodyParser = require('body-parser');
+//const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const config = require('./configuration/database'); // Mongoose Config 
 const path = require('path');
@@ -35,7 +35,12 @@ if (!process.env.NODE_ENV === 'test') {
   app.use(morgan('dev'));
 }
 
-app.use(bodyParser.json());
+//app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded({
+    extended: true
+}));
+
 //app.use(express.static(__dirname + '/client/front/dist/front')); // Provide static directory for frontend
 //app.use(express.static(__dirname + '/resources/images/avatars'));
 app.use(express.static(__dirname + '/public'));
