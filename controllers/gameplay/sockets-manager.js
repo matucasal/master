@@ -183,7 +183,7 @@ async function userAcceptDuel(data) {
     if (socket.auth) {
         let result = await gameManager.ready(data.roomID, data.userID);
         if (result) {
-            let question = await gameManager.one2oneQuestion(data.roomID, 0, function(result){
+            let question = await gameManager.one2oneQuestion(data.roomID, 1, function(result){
                 io.sockets.in(data.roomID).emit('duelQuestion', JSON.stringify(result));
             });
         }
@@ -201,18 +201,33 @@ async function userAnswerDuel(data) {
         //Enviar a todos los que estan en la room que alguien ya respondió
         io.sockets.in(data.roomID).emit('userDone', JSON.stringify({ 'userID': data.userID, 'answer': data.answer, 'timeResponse': data.timeResponse }));
         let answerSelected = { "socketID": socket.id, "userID": data.userID, "answer": data.answer };
-        let result = await gameManager.one2oneAnswer(answerSelected, data.roomID);
+        let result = await gameManager.one2oneAnswer(answerSelected, data.roomID, data.userID);
         //Faltan responder users? -> todavia nada
 
         //El resulto me trae o vacio o la nueva ronda 
         if (result != false) {
-            let question = await gameManager.one2oneQuestion(data.roomID, 0, function(result){
-                io.sockets.in(data.roomID).emit('duelQuestion', JSON.stringify(result));
-            });
+            
+            //Termino el juego
+            if (result.gameFinished) {
+                //console.log("-----Se cierra la partida------");
+                //io.sockets.in(data.roomID).emit('roomClosed', "");
+                //console.log("-----Hubo un ganador final------");
+                //io.sockets.in(data.roomID).emit('duel', result.winner.userID);
+                io.sockets.in(data.roomID).emit('duelResult', JSON.stringify({ 'userWonID': result.winner.userID, 'roomID': data.roomID }) )
+            }
+            //No termina el juego -> tengo que mandar mas preguntas
+            else {
+                //result tendria que ser el current round
+                let question = await gameManager.one2oneQuestion(data.roomID, result, function(result){
+                    io.sockets.in(data.roomID).emit('duelQuestion', JSON.stringify(result));
+                });
+            }
         }
+        
     } else {
         socket.emit("authenticated", false);
     }
+    
 }
 
 userDisconnecting = async function () {
