@@ -23,16 +23,16 @@ module.exports = {
 
 
   },
-  gameUpdate: async function (id, won, rounds) {
+  gameUpdate: async function (id, winner, rounds) {
 
-    let winner = {
-      "userID": won.userID,
-      "username": won.name,
-      "prize": won.books
+    let won = {
+      "userID": winner.userID,
+      "username": winner.name,
+      "prize": winner.books
     }
     game = {
       'rounds': rounds,
-      'won': winner
+      'won': won
     }
     Game.findOneAndUpdate({ 'gameID': id }, game, function (error) {
       if (error) { logger.error(error) }

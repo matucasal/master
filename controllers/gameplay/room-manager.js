@@ -49,8 +49,6 @@ function addUserRoom(roomID, user, socketID) {
 function delUserRoom(roomID, socket) {
     let index = gameRooms.findIndex(x => x.id === roomID);
     if (index != -1) {
-        console.log(index);
-        console.log(JSON.stringify(gameRooms[index]));
         let indexUser = 0;
         for (let i = 0; i < gameRooms[index].users.length; i++) {
             if (gameRooms[index].users[i].socketID == socket) {

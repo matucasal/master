@@ -54,7 +54,6 @@ authenticate = function (data) {
         if (err) {
             socket.emit("authenticated", false);
         } else {
-            console.log("Auth ok")
             socket.auth = true;
             socket.emit("authenticated", true);
         }
@@ -85,11 +84,10 @@ userJoined = function (data) {
 
         if (socket.adapter.rooms[data.roomId].length === 4) {
             let round = gameManager.startGame(data.roomId);
-            console.log("------- ronda -------------");
-            console.log(JSON.stringify(round));
             io.sockets.in(data.roomId).emit('newRound', JSON.stringify(round));
+            logger.info("Start game id: " + data.roomId ); 
         } else {
-            console.log("Hay " + socket.adapter.rooms[data.roomId].length + " usuario/s en la room");
+            logger.info("Room: " + data.roomId + " Users: " + socket.adapter.rooms[data.roomId].length)
         }
     } else {
 
@@ -105,7 +103,6 @@ async function userBet(data) {
     if (socket.auth) {
         let bet = { "bet": data.value, "userID": data.userID, "left": data.left, "roomID": data.roomID, "socket": socket.id, "pairing": data.pairing };
         let response = await gameManager.newBet(bet);
-        console.log("despues del await");
 
         socket.to(data.roomID).emit('newBet', JSON.stringify(bet));
         //io.sockets.in(data.roomID).emit('newBet', JSON.stringify(bet));
@@ -114,7 +111,7 @@ async function userBet(data) {
             socket.to(data.roomID).emit('newBet', JSON.stringify(bet));
             //io.sockets.in(data.roomID).emit('newBet', JSON.stringify(bet));
             gameManager.getQuestion(data.roomID, function (result) {
-                console.log("Se envia la pregunta");
+                logger.info("Room: " + data.roomID + " Se envía pregunta")
                 io.sockets.in(data.roomID).emit('question', JSON.stringify(result));
             })
         } else {
@@ -144,8 +141,7 @@ async function userAnswer(data) {
         if (result != false) {
             if (result.isWinner) {
                 if (result.usersGameOver.length > 0) {
-                    console.log("------Alguien perdio-------");
-                    console.log(result.usersGameOver);
+                    logger.info("Room: " + data.roomID + " Perdio user: " + result.usersGameOver)
                     io.sockets.in(data.roomID).emit('gameOver', result.usersGameOver);
                     removeUserInRoom(result.usersGameOver, data.roomID);
                 }
@@ -154,9 +150,9 @@ async function userAnswer(data) {
                     return;
                 }
                 if (result.gameFinished) {
-                    console.log("-----Se cierra la partida------");
+                    logger.info("Room: " + data.roomID + " Partida finalizada")
+                    logger.info("Room: " + data.roomID + " Ganador: " + result.winner.userID)
                     io.sockets.in(data.roomID).emit('roomClosed', "");
-                    console.log("-----Hubo un ganador final------");
                     io.sockets.in(data.roomID).emit('userWon', result.winner.userID);
                 } else {
                     io.sockets.in(data.roomID).emit('newRound', JSON.stringify(result.round));

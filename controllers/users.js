@@ -21,6 +21,7 @@ signToken = user => {
 module.exports = {
 
   signUp: async (req, res, next) => {
+    
     const { email, password, name } = req.body;
     // Check if there is a user with the same email
     const foundUser = await User.findOne({ "local.email": email });
@@ -48,6 +49,7 @@ module.exports = {
         const token = signToken(newUser);
         // Respond with token
         res.status(200).json({ "userID": user.id ,"token": token});
+        logger.notice("New user signup");
       }else{
         console.log("err", err)
         res.status(409).send("something wrong");

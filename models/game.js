@@ -7,9 +7,8 @@ const gameSchema = new Schema({
     date: { type: Date, default: Date.now },
     gameID: { type: String, required: true },
     participants: [{}],
-    rounds : { type: Number },
-    won: [{}]
-    
+    rounds : [{}],
+    won: { }
   });
     
   // Create a model

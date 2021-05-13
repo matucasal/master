@@ -97,7 +97,7 @@ function getQuestion(roomID, callback) {
  * @param {{value: number , roomID: string, userID: string, left: boolean, socket: string, pairing: boolean}} data
  */
 function newBet(data) {
-    console.log(data);
+    
     let response = {};
     response.finished = false
 
@@ -236,8 +236,8 @@ function newAnswer(answer, roomID) {
             case 1:
                 //End game
                 logger.info("Game terminated. ID: " + roomID);
-                gamePlaying[roomID].won = gamePlaying[roomID].users[Object.keys(gamePlaying[roomID].users)[0]].userID
-                Game.gameUpdate(roomID, gamePlaying[roomID].won, gamePlaying[roomID].rounds);
+                //gamePlaying[roomID].won = gamePlaying[roomID].users[Object.keys(gamePlaying[roomID].users)[0]].userID
+                Game.gameUpdate(roomID, winner, gamePlaying[roomID].rounds);
                 User.updateGameWin(gamePlaying[roomID].users[Object.keys(gamePlaying[roomID].users)[0]]);
                 delete gamePlaying[roomID];
                 response.gameFinished = true;
@@ -485,18 +485,13 @@ function one2oneAnswer(answer, roomID, userID) {
     console.log('one2oneanswer userID', userID)
         
     //Cuando llega una respuesta la agrego al contador
-    console.log('current round: ', gamePlaying[roomID].one2one.rounds[gamePlaying[roomID].one2one.currentRound])
+    //console.log('current round: ', gamePlaying[roomID].one2one.rounds[gamePlaying[roomID].one2one.currentRound])
     
     gamePlaying[roomID].one2one.rounds[gamePlaying[roomID].one2one.currentRound].answeredCount += 1;
     //Tomo la respuesta del user
     gamePlaying[roomID].one2one.rounds[gamePlaying[roomID].one2one.currentRound].users[answer.socketID].answer = answer.answer;
 
-    //Comparo respuestas
-    console.log("Respuesta que mando el usuario: ", answer.answer)
-    console.log("Respuesta esperada: ", gamePlaying[roomID].one2one.rounds[gamePlaying[roomID].one2one.currentRound].question)
-    console.log("Question esperado: ", gamePlaying[roomID].one2one.rounds[gamePlaying[roomID].one2one.currentRound].question)
-
-
+    
     //gamePlaying[roomID].one2one.rounds[indexRound].question
 
 
@@ -513,7 +508,8 @@ function one2oneAnswer(answer, roomID, userID) {
     }
 
     console.log('Estado actual del one2one despues de poner respuesta correcta')
-    console.log(gamePlaying[roomID].one2one)
+    console.log(gamePlaying[roomID].one2one.currentRound)
+    console.log(gamePlaying[roomID].one2one.currentRound.results)
     
     
     //Respondieron los 2 usuarios
@@ -541,7 +537,7 @@ function one2oneAnswer(answer, roomID, userID) {
             //Si son 4 rondas -> 4 - < 3
             if ( gamePlaying[roomID].one2one.currentRound == 4){
                 //Puede ganar si hay un 3 - 0 tambien
-                winner = quienGanaDuel(resultsList, 3, 0, false)
+                winner = quienGanaDuel(resultsList, 3, 1, false)
                 //Si no gana con 3 - 0, reviso si hay 4 -2 
                 if (!winner)
                     winner = quienGanaDuel(resultsList, 4, 2, false)   
@@ -580,11 +576,6 @@ function quienGanaDuel(resultsList, ganaCon, pierdeCon, mayorACinco) {
     let userIDGanador;
     let hayDerrotado = false;
 
-    console.log("Entro a quien gana duel")
-    console.log("GanaCon", ganaCon)
-    console.log("pierderCon", pierdeCon)
-
-    console.log('resultsList', resultsList)
     
     
     Object.keys(resultsList).forEach(function (key) {
