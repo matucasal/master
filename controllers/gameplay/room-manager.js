@@ -1,23 +1,33 @@
 const uniqid = require('uniqid');
 const Game = require('../games');
 const game_manager = require('./game-manager');
+const redisController = require('../redisController')
 const logger = require('../../configuration/logger')(__filename);
-
-
 
 var gameRooms = [];
 //Se crean las primeras rooms
-gameRooms.push({ 'id': uniqid(), 'books': 1000, 'level': 'Neofito', 'max': 4, 'inside': 0, 'users': [], 'jackpot': 0, 'won': {} });
-gameRooms.push({ 'id': uniqid(), 'books': 1000, 'level': 'Virtuoso', 'max': 4, 'inside': 0, 'users': [], 'jackpot': 0, 'won': {} });
-gameRooms.push({ 'id': uniqid(), 'books': 1000, 'level': 'Serafin', 'max': 4, 'inside': 0, 'users': [], 'jackpot': 0, 'won': {} });
+newRoom('Neofito');
+newRoom('Virtuoso');
+newRoom('Serafin');
 
 function newRoom(level) {
-    gameRooms.push({ 'id': uniqid(), 'books': 1000, 'level': level, 'max': 4, 'inside': 0, 'users': [], 'jackpot': 0, 'won': {} });
+    let room = { 'id': uniqid(), 'books': 1000, 'level': level, 'max': 4, 'inside': 0, 'users': [], 'jackpot': 0, 'won': {} }
+    gameRooms.push(room);
+    logger.notice("New room available: " + room.id);
+    redisController.saveRoom(room);
+    try {
+        redisController.saveRoom(room);
+    } catch (error) {
+        console.log(error);
+    }
+    
 }
 
-function deleteRoom(romID) {
-    var index = gameRooms.findIndex(x => x.id === romID);
+function deleteRoom(roomID) {
+    console.log(roomID);
+    let index = gameRooms.findIndex(x => x.id === roomID);
     gameRooms.splice(index, 1);
+    logger.notice("New room deleted: " + roomID);
 }
 
 function addUserRoom(roomID, user, socketID) {
@@ -38,7 +48,7 @@ function addUserRoom(roomID, user, socketID) {
         let room = Object.assign({}, gameRooms[index]);
         game_manager.newGame(room);
         this.newRoom(gameRooms[index].level);
-        gameRooms.splice(index, 1);
+        this.deleteRoom(roomID)
         return room;
     } else {
         return gameRooms[index];

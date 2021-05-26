@@ -145,7 +145,6 @@ getQuestion(category, level, callback){
           break;
       case "Geografia":
           Question_geografia.aggregate().sample(1).exec( function (err, result){
-              console.log("Geografia")
               callback(result[0]);
           })
           break;

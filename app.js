@@ -6,9 +6,9 @@ const mongoose = require('mongoose');
 const config = require('./configuration/database'); // Mongoose Config 
 const path = require('path');
 const logger = require('./configuration/logger')(__filename);
-const redis = require("redis");
-const redisClient = redis.createClient();
 const redisController = require('./controllers/redisController');
+
+
 
 
 const { use } = require('chai');
@@ -22,10 +22,8 @@ if (process.env.NODE_ENV === 'test') {
   logger.info("Mongodb connection succesfully");
 }
 
-redisClient.on('connect', function () {
-  logger.info('Conectado a Redis Server');
-  redisController.setClient(redisClient);
-});
+
+
 
 const app = express();
 app.use(cors());

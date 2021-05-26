@@ -122,6 +122,73 @@ var users =  {
 
     */
 
-var a = "10"
-var b = 1
-console.log(a+b);
+    const redis = require("redis");
+    const redisClient = redis.createClient();
+
+    redisClient.on('connect', function () {
+      console.log('Conectado a Redis Server');
+      redisClient.smembers("loggedUsers", (err, object) => {
+        if(err) {
+          console.error(err);
+        } else {
+          console.log("Users");
+          console.log(object);
+          
+        }
+      });
+
+      redisClient.hgetall("rooms", (err, object) => {
+        if(err) {
+          console.error(err);
+        } else {
+          console.log("Rooms");
+          console.log(object);
+        }
+      });
+
+      redisClient.hgetall("games", (err, object) => {
+        if(err) {
+          console.error(err);
+        } else {
+          console.log("games");
+          console.log(object);
+        }
+      });
+
+      redisClient.quit();
+
+      /*
+      redisClient.sadd('list', 'nuevo1');
+      redisClient.sadd('list', 'nuevo2');
+      redisClient.sadd('list', 'nuevo3');
+
+      redisClient.srem('list', 'nuevo*');
+      
+      redisClient.sscan('list', '0', 'match', 'nuevo*', function(err, reply){
+        console.log(reply);
+      })
+      */
+    });
+
+    /*
+    const redisClientsu = redis.createClient();
+
+    redisClientsu.config("set", "notify-keyspace-events", "KEA", function(err, reply){
+      console.log(reply);
+    })
+
+    redisClientsu.on("pmessage", function (pattern, channel, message) {
+      console.log("("+  pattern +")" + " client received message on " + channel + ": " + message);
+      switch (channel) {
+          // blah blah blah
+          // ...
+      }
+    });
+    redisClientsu.psubscribe("__key*__:*")
+    */    
+
+
+
+   
+
+    

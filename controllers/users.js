@@ -10,7 +10,7 @@ const redisController = require('./redisController');
 
 signToken = user => {
   return JWT.sign({
-    iss: 'CodeWorkr',
+    iss: 'MasterGame',
     sub: user.id,
     iat: new Date().getTime(), // current time
     exp: new Date().setDate(new Date().getDate() + 1) // current time + 1 day ahead
@@ -90,7 +90,6 @@ module.exports = {
   },
 
   getAvatar: async (req, res, next) => {
-    console.log(req.params.id);
     var nameImage = req.params.id;
     fs.readFile(path.resolve(__dirname, '../resources/images/avatars/' + nameImage), function (err, content) {
       if (err) {
@@ -111,7 +110,7 @@ module.exports = {
       if (err) {
         console.log(err);
       }else{
-        console.log("Se actualizaron los books correctamente")
+
       }
     })
   },
@@ -125,7 +124,7 @@ module.exports = {
   },
   
   updateGameLoose: async (userID, books) => {
-    console.log("UpdateGameLoose. UserID: " + userID + " " + "Libros a descontar: " + books);
+
     User.findOneAndUpdate({ _id: userID }, { $inc: { gamesPlayed: +1, gamesLost: +1, books: -books }}, {new: true},function(err, response) {
       if (err) {
         console.log(err);

@@ -17,8 +17,6 @@ module.exports = {
     })
     game.save((err, appt) => {
       if (err) { logger.error(err); }
-      console.log("Mongo save ");
-      logger.info("Mongodb inserted action was ok.");
     });
 
 
