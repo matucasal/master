@@ -26,33 +26,43 @@ function getGame(id) {
 }
 
 function delUserGame(gameID, socketID) {
+
     let userID = gamePlaying[gameID].users[socketID].userID;
     if (gamePlaying[gameID].rounds[gamePlaying[gameID].rounds.length - 1].state == "betting" && gamePlaying[gameID].rounds[gamePlaying[gameID].rounds.length - 1].users[socketID].turn != gamePlaying[gameID].rounds[gamePlaying[gameID].rounds.length - 1].nextTurn) {
-        gamePlaying[gameID].rounds[gamePlaying[gameID].rounds.length - 1].usersInRound -= 1;
+        gamePlaying[gameID].rounds[gamePlaying[gameID].rounds.length - 1].usersInRound -= +1;
         delete gamePlaying[gameID].users[socketID];
         delete gamePlaying[gameID].rounds[gamePlaying[gameID].rounds.length - 1].users[socketID];
-        logger.notice("user deleted from room: " + gameID);
-        return userID;
+        logger.notice("Betting No turn---> user deleted from room: " + gameID);
+        let result = {}
+        result.userID = userID;
+        return result;
     }
     if (gamePlaying[gameID].rounds[gamePlaying[gameID].rounds.length - 1].state == "betting" && gamePlaying[gameID].rounds[gamePlaying[gameID].rounds.length - 1].users[socketID].turn == gamePlaying[gameID].rounds[gamePlaying[gameID].rounds.length - 1].nextTurn) {
-        newBet({ 'value': 50, 'roomID': gameID, 'userID': userID, 'left': true, 'socket': socketID, 'pairing': false });
+        let result =  newBet({ 'value': 50, 'roomID': gameID, 'userID': userID, 'left': true, 'socket': socketID, 'pairing': false });
         delete gamePlaying[gameID].users[socketID];
-        logger.notice("user deleted from room: " + gameID);
-        //delete gamePlaying[gameID].rounds[gamePlaying[gameID].rounds.length -1].users[socketID];
-        return userID;
+        logger.notice("Betting MyTurn---> user deleted from room: " + gameID);
+        result.userID = userID
+        result.bet = {"value": 50 , "roomID": gameID, "userID": userID, "left": true, "pairing": false}
+        delete gamePlaying[gameID].rounds[gamePlaying[gameID].rounds.length -1].users[socketID];
+        return result;
     }
     if (gamePlaying[gameID].rounds[gamePlaying[gameID].rounds.length - 1].state == "pairing") {
-        newBet({ 'value': 50, 'roomID': gameID, 'userID': userID, 'left': true, 'socket': socketID, 'pairing': true });
+        let result = newBet({ 'value': 50, 'roomID': gameID, 'userID': userID, 'left': true, 'socket': socketID, 'pairing': true });
         delete gamePlaying[gameID].users[socketID];
         logger.notice("user deleted from room: " + gameID);
-        return userID;
+        result.userID = userID
+        result.bet = {"value": 50 , "roomID": gameID, "userID": userID, "left": true, "pairing": true}
+        return result;
     }
     if (gamePlaying[gameID].rounds[gamePlaying[gameID].rounds.length - 1].state == "answering") {
         newAnswer({ "socketID": socketID, "userID": userID, "answer": "", "timeResponse": 8000 });
         delete gamePlaying[gameID].users[socketID];
         delete gamePlaying[gameID].rounds[gamePlaying[gameID].rounds.length - 1].users[socketID];
         logger.notice("user deleted from room: " + gameID);
-        return userID;
+        let result = {}
+        result.userID
+        result.answering = true
+        return result;
     }
 
 }
@@ -101,16 +111,18 @@ function getQuestion(roomID, callback) {
  * @param {{value: number , roomID: string, userID: string, left: boolean, socket: string, pairing: boolean}} data
  */
 function newBet(data) {
-    
     let response = {};
     response.finished = false
+    response.userLeftRound = false
 
     if (data.left == true) {
         gamePlaying[data.roomID].rounds[gamePlaying[data.roomID].rounds.length - 1].prize += parseInt(data.bet);
-        gamePlaying[data.roomID].rounds[gamePlaying[data.roomID].rounds.length - 1].betCount += 1;
-        gamePlaying[data.roomID].rounds[gamePlaying[data.roomID].rounds.length - 1].nextTurn += 1;
+        gamePlaying[data.roomID].rounds[gamePlaying[data.roomID].rounds.length - 1].betCount += +1;
+        gamePlaying[data.roomID].rounds[gamePlaying[data.roomID].rounds.length - 1].nextTurn += +1;
         gamePlaying[data.roomID].users[data.socket].books -= parseInt(data.bet);
         delete gamePlaying[data.roomID].rounds[gamePlaying[data.roomID].rounds.length - 1].users[data.socket];
+        //gamePlaying[data.roomID].rounds[gamePlaying[data.roomID].rounds.length - 1].usersInRound -= +1;
+        response.userLeftRound = data.userID;
     } else {
         gamePlaying[data.roomID].rounds[gamePlaying[data.roomID].rounds.length - 1].betCount += 1;
         gamePlaying[data.roomID].rounds[gamePlaying[data.roomID].rounds.length - 1].nextTurn += 1;
@@ -463,10 +475,6 @@ function ready(roomID, userID) {
 
 function one2oneQuestion(roomID, indexRound, callback) {
 
-    console.log("Seleccionar pregunta");
-    console.log("indexRound: " + JSON.stringify(indexRound));
-    console.log(JSON.stringify(gamePlaying[roomID].one2one.currentRound));
-    console.log(gamePlaying[roomID].one2one.rounds[gamePlaying[roomID].one2one.currentRound].category);
     Question.getQuestion(gamePlaying[roomID].one2one.rounds[gamePlaying[roomID].one2one.currentRound].category, 1, function (result) {
         if (result) {
             let quest = result;
@@ -490,9 +498,7 @@ function one2oneQuestion(roomID, indexRound, callback) {
 function one2oneAnswer(answer, roomID, userID) {
 
     let response = {};
-    logger.notice("Llega una respuesta");
-    console.log("User: " + userID);
-    console.log("Answer: " + answer);
+
     //Cuando llega una respuesta la agrego al contador
     //logger.notice('current round: ', gamePlaying[roomID].one2one.rounds[gamePlaying[roomID].one2one.currentRound])
     
@@ -525,6 +531,17 @@ function one2oneAnswer(answer, roomID, userID) {
     if (gamePlaying[roomID].one2one.rounds[gamePlaying[roomID].one2one.currentRound].answeredCount == 2) {
         console.log("Duelo Round N°: "+ gamePlaying[roomID].one2one.currentRound);
         console.log("Respondieron los 2 usuarios");
+
+        //Cuando llega aca tengo que enviar el resultado al cliente
+        /*[{
+        userId: 23423432432,
+        result: 1
+        },
+        {
+        userId: 23423432432,
+        result: 1
+        }]*/
+
         //Si ya hay mas de 3 rondas -> reviso si ya gano alguno
         if (gamePlaying[roomID].one2one.currentRound >= 3) {
             //Tengo que resolver si hay ganador o no

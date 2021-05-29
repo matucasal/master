@@ -97,6 +97,8 @@ userJoined = function (data) {
 
 }
 
+
+
 /**
  * @param {{value: number , roomID: string, userID: string, left: boolean, pairing: boolean}} data
  */
@@ -108,6 +110,10 @@ async function userBet(data) {
 
         socket.to(data.roomID).emit('newBet', JSON.stringify(bet));
         //io.sockets.in(data.roomID).emit('newBet', JSON.stringify(bet));
+
+        if (response.userLeftRound) {
+            socket.to(data.roomID).emit('userLeftRound', response.userLeftRound);
+        }
 
         if (response.finished) {
             socket.to(data.roomID).emit('newBet', JSON.stringify(bet));
@@ -240,8 +246,15 @@ userDisconnecting = async function () {
             let room = roomManager.delUserRoom(roomID, socket.id);
             if (room == false) {
                 logger.notice("Player en juego..");
-                let userID = await gameManager.delUserGame(roomID, socket.id);
-                socket.to(roomID).emit('userLeft', userID);
+                let result = await gameManager.delUserGame(roomID, socket.id);
+                if (result.bet) {
+                    let bet = { "bet": result.bet.value, "userID": result.userID, "left": true, "roomID": roomID, "socket": socket.id, "pairing": false };
+                    socket.to(roomID).emit('newBet', JSON.stringify(bet));
+                }
+                if (result.answering) {
+                    io.sockets.in(data.roomID).emit('userDone', JSON.stringify({ 'userID': result.userID, 'answer': "", 'timeResponse': 8000 }));
+                }
+                socket.to(roomID).emit('userLeft', result.userID);
             }
         }
 
