@@ -452,6 +452,7 @@ function createOne2One(users, roomID) {
         round.category = categories[index];
         round.question = {};
         round.won;
+        round.results = [];
         round.answeredCount = 0;
         round.users = newUsers;
         one2one.rounds.push(round);
@@ -509,7 +510,8 @@ function one2oneAnswer(answer, roomID, userID) {
     
     //gamePlaying[roomID].one2one.rounds[indexRound].question
 
-
+    //En este objeto guardo el resultado de la ronda
+    
     //Reviso si esta correcta la respuesta
     if (answer.answer == gamePlaying[roomID].one2one.rounds[gamePlaying[roomID].one2one.currentRound].question.answerCorrect) {
         logger.notice("Respondio correctamente: " + userID)
@@ -520,6 +522,13 @@ function one2oneAnswer(answer, roomID, userID) {
         logger.notice("Total del que gano antes del + 1 " + gamePlaying[roomID].one2one.results[userID].total)
         //guardo en el results del userID que sumo una respuesta correcta
         gamePlaying[roomID].one2one.results[userID].total =  gamePlaying[roomID].one2one.results[userID].total + 1
+
+        //Agrego el resultado de la ronda
+        gamePlaying[roomID].one2one.rounds[gamePlaying[roomID].one2one.currentRound].results.push({'userId':userID, 'result': true })
+    }
+    //La respuesta es incorrecta
+    else {
+        gamePlaying[roomID].one2one.rounds[gamePlaying[roomID].one2one.currentRound].results.push({'userId':userID, 'result': false })
     }
 
     logger.notice('Estado actual del one2one despues de poner respuesta correcta')
@@ -532,15 +541,12 @@ function one2oneAnswer(answer, roomID, userID) {
         console.log("Duelo Round N°: "+ gamePlaying[roomID].one2one.currentRound);
         console.log("Respondieron los 2 usuarios");
 
-        //Cuando llega aca tengo que enviar el resultado al cliente
-        /*[{
-        userId: 23423432432,
-        result: 1
-        },
-        {
-        userId: 23423432432,
-        result: 1
-        }]*/
+
+       //Agrego el resultado de la ronda
+       console.log("resultado de la ronda")
+       console.log(gamePlaying[roomID].one2one.rounds[gamePlaying[roomID].one2one.currentRound].results)
+       response.resultadoRonda = gamePlaying[roomID].one2one.rounds[gamePlaying[roomID].one2one.currentRound].results;
+
 
         //Si ya hay mas de 3 rondas -> reviso si ya gano alguno
         if (gamePlaying[roomID].one2one.currentRound >= 3) {
@@ -592,7 +598,9 @@ function one2oneAnswer(answer, roomID, userID) {
         }
         
         gamePlaying[roomID].one2one.currentRound += 1;
-        response = gamePlaying[roomID].one2one.currentRound
+        //Le agrego uno al current round para mandarlo al socket
+        response.currentRound = gamePlaying[roomID].one2one.currentRound
+        
         return response;
     }
 
