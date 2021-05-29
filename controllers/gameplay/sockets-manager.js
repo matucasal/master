@@ -215,15 +215,20 @@ async function userAnswerDuel(data) {
 
                 io.sockets.in(data.roomID).emit('duelResult', JSON.stringify({ 'userWonID': result.winner.userID, 'roomID': data.roomID }) )
             }
-            //No termina el juego -> tengo que mandar mas preguntas
+            //No termina el juego -> tengo que mandar mas preguntas y mandar quien gano la ronda 
             else {
+                console.log("llego el resultado")
+                console.log(result)
+                if (result.resultadoRonda){
+                    console.log("emito el resultado")
+                    io.sockets.in(data.roomID).emit('duelQuestionWon', JSON.stringify(result.resultadoRonda) )
+                }
                 //result tendria que ser el current round
-                let question = await gameManager.one2oneQuestion(data.roomID, result, function(result){
+                let question = await gameManager.one2oneQuestion(data.roomID, result.currentRound, function(result){
                     io.sockets.in(data.roomID).emit('duelQuestion', JSON.stringify(result));
                 });
             }
         }
-        
     } else {
         socket.emit("authenticated", false);
     }
