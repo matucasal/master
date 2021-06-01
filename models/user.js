@@ -6,6 +6,7 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
   books: { type: Number, default: 1000 },
   level: { type: String },
+  lastLogin: { type: Date },
   avatar: {
     peinado: { type: String },
     rostro: { type: String },
@@ -63,6 +64,10 @@ const userSchema = new Schema({
     name: { type: String },
     email: { type: String, lowercase: true },
   }
+},
+{
+  timestamps: true,
+  versionKey: false,
 });
 
 userSchema.pre('save', async function (next) {

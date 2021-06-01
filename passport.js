@@ -113,6 +113,10 @@ passport.use(new LocalStrategy({
       return done(null, false);
     }
   
+    User.findByIdAndUpdate({_id: user._id}, {"lastLogin": Date.now()}, function(err, res){
+      if(err) console.log(err);
+    })
+
     // Otherwise, return the user
     done(null, user);
   } catch(error) {

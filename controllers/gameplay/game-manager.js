@@ -577,8 +577,8 @@ function one2oneAnswer(answer, roomID, userID) {
             }
 
             //Si son 4 rondas -> 4 - < 3
-            if ( gamePlaying[roomID].one2one.currentRound >= 5){
-                winner = quienGanaDuel(resultsList, null, null, true)   
+            if ( gamePlaying[roomID].one2one.currentRound == 5){
+                winner = quienGanaDuel(resultsList, 1, 0, false)   
             }
 
             if (winner){

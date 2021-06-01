@@ -171,8 +171,20 @@ async function userAnswer(data) {
                     io.sockets.in(data.roomID).emit('duelNotice', data.roomID);
                     return;
                 }else{
-                    io.sockets.in(data.roomID).emit('newRound', JSON.stringify(result.round));
-                    io.sockets.in(data.roomID).emit('userWon', "");
+                    if (result.usersGameOver.length > 0) {
+                        io.sockets.in(data.roomID).emit('gameOver', result.usersGameOver);
+                        removeUserInRoom(result.usersGameOver, data.roomID);
+                    }
+                    if (result.gameFinished) {
+                        logger.info("Room: " + data.roomID + " Partida finalizada")
+                        logger.info("Room: " + data.roomID + " Ganador: " + result.winner.userID)
+                        io.sockets.in(data.roomID).emit('roomClosed', "");
+                        io.sockets.in(data.roomID).emit('userGameWon', result.winner.userID);
+                    } else {
+                        io.sockets.in(data.roomID).emit('userWon', "");
+                        io.sockets.in(data.roomID).emit('newRound', JSON.stringify(result.round));
+                    }
+                    
                 }
                 
             }
