@@ -576,9 +576,9 @@ function one2oneAnswer(answer, roomID, userID) {
                     winner = quienGanaDuel(resultsList, 4, 2, false)   
             }
 
-            //Si son 4 rondas -> 4 - < 3
+            //Si son 5 rondas -> gana el que mas rondas gano
             if ( gamePlaying[roomID].one2one.currentRound == 5){
-                winner = quienGanaDuel(resultsList, 1, 0, false)   
+                winner = quienGanaDuel(resultsList, 0, 0, true)   
             }
 
             if (winner){
@@ -609,7 +609,7 @@ function one2oneAnswer(answer, roomID, userID) {
 }
 
 
-function quienGanaDuel(resultsList, ganaCon, pierdeCon, mayorACinco) {
+function quienGanaDuel(resultsList, ganaCon, pierdeCon, mayorIgualACinco) {
     let totalGanador = 0;
     let userIDGanador;
     let hayDerrotado = false;
@@ -619,7 +619,7 @@ function quienGanaDuel(resultsList, ganaCon, pierdeCon, mayorACinco) {
     Object.keys(resultsList).forEach(function (key) {
 
         //Hago validacion por si no es una ronda de > 5
-        if (!mayorACinco){
+        if (!mayorIgualACinco){
             logger.notice(" no es mayorACinco")
             //1) Reviso que el total sea suficiente para ganar
             if (resultsList[key].total >= ganaCon){
@@ -652,6 +652,7 @@ function quienGanaDuel(resultsList, ganaCon, pierdeCon, mayorACinco) {
                 //Si es igual, anulo ganador
                 if (resultsList[key].total == totalGanador){
                     logger.notice("hay empate")
+                    //Si hay empate tengo que mandar una nueva ronda -> TODO
                     userIDGanador = null
                     hayDerrotado = false
                 }
