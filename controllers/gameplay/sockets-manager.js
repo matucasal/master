@@ -231,7 +231,7 @@ async function userAnswerDuel(data) {
             //Termino el juego
             if (result.gameFinished) {
 
-                io.sockets.in(data.roomID).emit('duelResult', JSON.stringify({ 'userWonID': result.winner.userID, 'roomID': data.roomID }) )
+                io.sockets.in(data.roomID).emit('duelResult', JSON.stringify({ 'userWonID': result.winner, 'roomID': data.roomID }) )
             }
             //No termina el juego -> tengo que mandar mas preguntas y mandar quien gano la ronda 
             else {

@@ -644,31 +644,26 @@ function quienGanaDuel(resultsList, ganaCon, pierdeCon, mayorIgualACinco) {
         else{
             logger.notice(" es mayorACinco")
             //1) Reviso que sea mayor o igual al anterior
-            if (resultsList[key].total >= totalGanador){
+            if (resultsList[key].total > totalGanador){
                 totalGanador = resultsList[key].total
                 logger.notice("actual ganador")
-                logger.notice('totalGanador' , totalGanador)
-                
-                //Si es igual, anulo ganador
-                if (resultsList[key].total == totalGanador){
-                    logger.notice("hay empate")
-                    //Si hay empate tengo que mandar una nueva ronda -> TODO
-                    userIDGanador = null
-                    hayDerrotado = false
-                }
-                //Si es distinto -> hay ganador
-                else {
-                    userIDGanador = key
-                    hayDerrotado = true
-                }
-                
+                logger.notice('totalGanador')
+                logger.notice(totalGanador)
+                userIDGanador = key
             }
-        
-            
+            else if (resultsList[key].total < totalGanador){
+                hayDerrotado = true
+            }
+            else if (resultsList[key].total == totalGanador){
+                //Si es igual, anulo ganador
+                logger.notice("hay empate")
+                //Si hay empate tengo que mandar una nueva ronda -> TODO
+                userIDGanador = null
+                hayDerrotado = false
+            } 
+                
         }
-
         
-
     }) 
 
 
