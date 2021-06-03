@@ -565,23 +565,44 @@ function one2oneAnswer(answer, roomID, userID) {
             //gamePlaying[roomID].one2one.results[userID].total
             //Si son 3 rondas -> 3 - 0
             
-            //Llamo al metodo duelAlgorithm -> si hay ganador, lo devuelve sino false
-            winner = duelAlgorithm (resultsList, gamePlaying[roomID].one2one.currentRound )
+            //Esta variable es la que va a tomar el resultado del duelalgoritm
+            let responseDuel;
             
-
-            if (winner){
+            //Llamo al metodo duelAlgorithm -> si hay ganador, lo devuelve en el response, sino devuelve empate, sino false/null
+            //Params ronda actual, total de rounds 
+            responseDuel = duelAlgorithm (resultsList, gamePlaying[roomID].one2one.currentRound, gamePlaying[roomID].one2one.rounds.length -1 )
+            
+            if (responseDuel.winner){
                 //Termina la partida
-                logger.notice("Ganador: " + winner);
+                logger.notice("Ganador: " + responseDuel.winner);
                 logger.notice("Game terminated. ID: " + roomID);
-                gamePlaying[roomID].won = winner
+                gamePlaying[roomID].won = responseDuel.winner
                 Game.gameUpdate(roomID, gamePlaying[roomID].won, gamePlaying[roomID].rounds);
                 User.updateGameWin(gamePlaying[roomID].users[Object.keys(gamePlaying[roomID].users)[0]]);
                 delete gamePlaying[roomID];
                 //mando como respuesta al socket que termino el juego y el ganador
                 response.gameFinished = true;
-                response.winner = winner;
+                response.winner = responseDuel.winner;
                 return response;
                 //Si no hay ganador -> sumo una nuva ronda
+            }
+            //si no hay winner pero ya hay 5 rondas o mas, tengo que crear una nueva ronda
+            else if(responseDuel.empate){
+                logger.notice("Creo round x empate");
+                //Creo una ronda en el duel
+                let round = {}
+                round.category = categories[Math.floor(Math.random() * categories.length)];
+                round.question = {};
+                round.won;
+                round.results = [];
+                round.answeredCount = 0;
+                round.users = gamePlaying[roomID].users;
+
+                //Agrego la ronda al duel
+                gamePlaying[roomID].one2one.rounds.push(round)
+
+                //Le aviso al response que es un add round
+                response.addRound = true
             }
         }
         
@@ -596,7 +617,8 @@ function one2oneAnswer(answer, roomID, userID) {
         
 }
 
-function duelAlgorithm(resultsList, actualRound) {
+//Params ronda actual, total de rounds
+function duelAlgorithm(resultsList, actualRound, totalRounds) {
     
     //Estas variables van a ser los flags para ir viendo como vienen los usuarios
     let totalGanador = 0;
@@ -604,12 +626,15 @@ function duelAlgorithm(resultsList, actualRound) {
 
     let userIDGanador;
     
-    let totalRounds = 5
     let diferenciaRounds = 0;
 
     diferenciaRounds = totalRounds - actualRound;
     
-    logger.notice("Ronda actual: " + totalRounds);
+    //Voy a devolver esto
+    let response = {};
+    
+    logger.notice("Rondas totales hasta ahora: " + totalRounds);
+    logger.notice("Ronda actual: " + actualRound);
     logger.notice("Diferencia rounds: " + diferenciaRounds);
 
     
@@ -636,10 +661,17 @@ function duelAlgorithm(resultsList, actualRound) {
 
     //3) Ahora reviso si la diferencia entre ganador y perdedor es > a la diferencia, si es asi, hay ganador
     let diferenciaGanadorPerdedor = totalGanador - totalPerdedor
-    
+    //Si hay diferencia > se termina
     if (diferenciaGanadorPerdedor > diferenciaRounds){
-        return userIDGanador
+        response.winner = userIDGanador;
     }
+    //si no hay diferencia y ya hay 5 rondas o mas, hay empate
+    else if (actualRound >= 5){
+        logger.notice("Es un empate");
+        response.empate = true
+    }
+
+    return response
     
 }
 
