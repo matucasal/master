@@ -564,23 +564,10 @@ function one2oneAnswer(answer, roomID, userID) {
             
             //gamePlaying[roomID].one2one.results[userID].total
             //Si son 3 rondas -> 3 - 0
-            if ( gamePlaying[roomID].one2one.currentRound == 3){
-                winner = quienGanaDuel(resultsList, 3, 0, false)   
-            }
-
-            //Si son 4 rondas -> 4 - < 3
-            if ( gamePlaying[roomID].one2one.currentRound == 4){
-                //Puede ganar si hay un 3 - 0 tambien
-                winner = quienGanaDuel(resultsList, 3, 1, false)
-                //Si no gana con 3 - 0, reviso si hay 4 -2 
-                if (!winner)
-                    winner = quienGanaDuel(resultsList, 4, 2, false)   
-            }
-
-            //Si son 5 rondas -> gana el que mas rondas gano
-            if ( gamePlaying[roomID].one2one.currentRound == 5){
-                winner = quienGanaDuel(resultsList, 0, 0, true)   
-            }
+            
+            //Llamo al metodo duelAlgorithm -> si hay ganador, lo devuelve sino false
+            winner = duelAlgorithm (resultsList, gamePlaying[roomID].one2one.currentRound )
+            
 
             if (winner){
                 //Termina la partida
@@ -609,70 +596,54 @@ function one2oneAnswer(answer, roomID, userID) {
         
 }
 
-
-function quienGanaDuel(resultsList, ganaCon, pierdeCon, mayorIgualACinco) {
-    let totalGanador = 0;
-    let userIDGanador;
-    let hayDerrotado = false;
-
+function duelAlgorithm(resultsList, actualRound) {
     
+    //Estas variables van a ser los flags para ir viendo como vienen los usuarios
+    let totalGanador = 0;
+    let totalPerdedor = 0;
+
+    let userIDGanador;
+    
+    let totalRounds = 5
+    let diferenciaRounds = 0;
+
+    diferenciaRounds = totalRounds - actualRound;
+    
+    logger.notice("Ronda actual: " + totalRounds);
+    logger.notice("Diferencia rounds: " + diferenciaRounds);
+
     
     Object.keys(resultsList).forEach(function (key) {
-
-        //Hago validacion por si no es una ronda de > 5
-        if (!mayorIgualACinco){
-            logger.notice(" no es mayorACinco")
-            //1) Reviso que el total sea suficiente para ganar
-            if (resultsList[key].total >= ganaCon){
-                logger.notice ("hay uno con > ganaCon")
-                //2) Si es suficiente para ganar reviso que sea mayor al anterior
-                if (resultsList[key].total > totalGanador){
-                    totalGanador = resultsList[key].total
-                    userIDGanador = key
-                    logger.notice("actual ganador")
-                    logger.notice('totalGanador' , totalGanador)
-                    logger.notice('userIDGanador', userIDGanador)
-                }
-            }
+        //1) Reviso que sea mayor => este usuario puede ganar
+        if (resultsList[key].total >= totalGanador){
+            //1.1) Tomo el total ganador anterior y lo dejo como perdedor
+            totalPerdedor = totalGanador
             
-            //3) Reviso que el total sea menor igual al que se pide para perder
-            if (resultsList[key].total <= pierdeCon){
-                logger.notice("hay perdedor")
-                hayDerrotado = true
-            }
+            //1.2) Tomo el total nuevo y lo pongo como ganador
+            totalGanador = resultsList[key].total
+            userIDGanador = key
+            
         }
-        //Hago validacion por si es ronda de > 5
-        else{
-            logger.notice(" es mayorACinco")
-            //1) Reviso que sea mayor o igual al anterior
-            if (resultsList[key].total > totalGanador){
-                totalGanador = resultsList[key].total
-                logger.notice("actual ganador")
-                logger.notice('totalGanador')
-                logger.notice(totalGanador)
-                userIDGanador = key
-            }
-            else if (resultsList[key].total < totalGanador){
-                hayDerrotado = true
-            }
-            else if (resultsList[key].total == totalGanador){
-                //Si es igual, anulo ganador
-                logger.notice("hay empate")
-                //Si hay empate tengo que mandar una nueva ronda -> TODO
-                userIDGanador = null
-                hayDerrotado = false
-            } 
-                
+        //2) Reviso si es menor => este usuario puede perder
+        else if (resultsList[key].total < totalGanador){
+            totalPerdedor = resultsList[key].total
         }
-        
     }) 
 
+    logger.notice("Total ganador: " + totalGanador);
+    logger.notice("Total perdedor: " + totalPerdedor);
+    
 
-    //4) Si hay derrotado y hay totalganador quiere decir que uno gano -> devuelvo ganador
-    if (hayDerrotado && totalGanador > 0){
+    //3) Ahora reviso si la diferencia entre ganador y perdedor es > a la diferencia, si es asi, hay ganador
+    let diferenciaGanadorPerdedor = totalGanador - totalPerdedor
+    
+    if (diferenciaGanadorPerdedor > diferenciaRounds){
         return userIDGanador
     }
+    
 }
+
+
 
 
 module.exports = {
