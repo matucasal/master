@@ -260,6 +260,7 @@ function newAnswer(answer, roomID) {
                 Game.gameUpdate(roomID, winner, gamePlaying[roomID].rounds);
                 User.updateGameWin(gamePlaying[roomID].users[Object.keys(gamePlaying[roomID].users)[0]]);
                 delete gamePlaying[roomID];
+                response.winner = winner;
                 response.gameFinished = true;
                 return response;
                 break;

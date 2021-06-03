@@ -151,7 +151,7 @@ async function userAnswer(data) {
             if (result.isWinner) {
                 if (result.usersGameOver.length > 0) {
                     io.sockets.in(data.roomID).emit('gameOver', result.usersGameOver);
-                    removeUserInRoom(result.usersGameOver, data.roomID);
+                    await removeUserInRoom(result.usersGameOver, data.roomID);
                 }
                 if (result.isOne2One) {
                     io.sockets.in(data.roomID).emit('duelNotice', data.roomID);
@@ -167,14 +167,15 @@ async function userAnswer(data) {
                     io.sockets.in(data.roomID).emit('newRound', JSON.stringify(result.round));
                 }
             } else {
+                if (result.usersGameOver.length > 0) {
+                    io.sockets.in(data.roomID).emit('gameOver', result.usersGameOver);
+                    await removeUserInRoom(result.usersGameOver, data.roomID);
+                }
                 if (result.isOne2One) {
                     io.sockets.in(data.roomID).emit('duelNotice', data.roomID);
                     return;
                 }else{
-                    if (result.usersGameOver.length > 0) {
-                        io.sockets.in(data.roomID).emit('gameOver', result.usersGameOver);
-                        removeUserInRoom(result.usersGameOver, data.roomID);
-                    }
+                    
                     if (result.gameFinished) {
                         logger.info("Room: " + data.roomID + " Partida finalizada")
                         logger.info("Room: " + data.roomID + " Ganador: " + result.winner.userID)
@@ -235,10 +236,10 @@ async function userAnswerDuel(data) {
             }
             //No termina el juego -> tengo que mandar mas preguntas y mandar quien gano la ronda 
             else {
-                console.log("llego el resultado")
-                console.log(result)
+                //console.log("llego el resultado")
+                //console.log(result)
                 if (result.resultadoRonda){
-                    console.log("emito el resultado")
+                    //console.log("emito el resultado")
                     io.sockets.in(data.roomID).emit('duelQuestionWon', JSON.stringify(result.resultadoRonda) )
                 }
                 //result tendria que ser el current round
@@ -276,7 +277,6 @@ userDisconnecting = async function () {
         }
 
     } catch (error) {
-        logger.notice(error);
         logger.error(error);
     }
 }
@@ -291,7 +291,7 @@ userDisconnect = function () {
     }
 }
 
-removeUserInRoom = function (users, roomID) {
+removeUserInRoom = async function (users, roomID) {
     users.forEach(element => {
         io.sockets.sockets[element.socketID].leave(roomID);
     });
