@@ -130,6 +130,17 @@ function newBet(data) {
         gamePlaying[data.roomID].rounds[gamePlaying[data.roomID].rounds.length - 1].prize += parseInt(data.bet);
     }
 
+    //agrego al response el turno que va ahora
+    //Tengo el round -> el round tiene todos los users y el next turno. Con esto yo podria ver que userId dependiendo el turno
+    //getUserTurnInRound(round, turn)
+    //console.log("ronda actual")
+    //console.log(gamePlaying[data.roomID].rounds[gamePlaying[data.roomID].rounds.length - 1])
+    let nextTurnUser = getUserTurnInRound(gamePlaying[data.roomID].rounds[gamePlaying[data.roomID].rounds.length - 1],gamePlaying[data.roomID].rounds[gamePlaying[data.roomID].rounds.length - 1].nextTurn )
+    //Agrego en el response el turno del proximo user
+    if(nextTurnUser)
+        response.nextTurnUser = nextTurnUser.userID
+    
+
     if (data.pairing) {
         let pairing = checkPairing(gamePlaying[data.roomID].rounds[gamePlaying[data.roomID].rounds.length - 1].users);
 
@@ -392,6 +403,17 @@ function changeTurns(obj, roomID) {
     });
 
     return obj;
+}
+
+function getUserTurnInRound(round,turn){
+    //Recorro todos los users del round
+    for (let key in round.users) {
+        
+        if (round.users[key].turn == turn){
+            //console.log('user dentro del getuserturninround')
+            return round.users[key]
+        }
+    } 
 }
 
 function createRound(users, roomID, isNewRound) {

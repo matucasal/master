@@ -107,6 +107,12 @@ async function userBet(data) {
     if (socket.auth) {
         let bet = { "bet": data.value, "userID": data.userID, "left": data.left, "roomID": data.roomID, "socket": socket.id, "pairing": data.pairing };
         let response = await gameManager.newBet(bet);
+        
+        //Agrego el userId del proximo turno al mensaje que mando al socket
+        bet.nextTurnUserId = response.nextTurnUser
+        
+        
+        
 
         socket.to(data.roomID).emit('newBet', JSON.stringify(bet));
         //io.sockets.in(data.roomID).emit('newBet', JSON.stringify(bet));
