@@ -151,6 +151,8 @@ async function userAnswer(data) {
         let answerSelected = { "socketID": socket.id, "userID": data.userID, "answer": data.answer, "timeResponse": data.timeResponse };
         let result = await gameManager.newAnswer(answerSelected, data.roomID);
 
+        console.log("result dps del answer")
+        console.log(result)
 
         //Faltan responder users?
         if (result != false) {
@@ -160,7 +162,7 @@ async function userAnswer(data) {
                     await removeUserInRoom(result.usersGameOver, data.roomID);
                 }
                 if (result.isOne2One) {
-                    io.sockets.in(data.roomID).emit('duelNotice', data.roomID);
+                    io.sockets.in(data.roomID).emit('duelNotice', {roomID: data.roomID, usersOne2One:result.usersOne2One} );
                     return;
                 }
                 if (result.gameFinished) {
@@ -178,7 +180,7 @@ async function userAnswer(data) {
                     await removeUserInRoom(result.usersGameOver, data.roomID);
                 }
                 if (result.isOne2One) {
-                    io.sockets.in(data.roomID).emit('duelNotice', data.roomID);
+                    io.sockets.in(data.roomID).emit('duelNotice', {roomID: data.roomID, usersOne2One:result.usersOne2One} );
                     return;
                 }else{
                     

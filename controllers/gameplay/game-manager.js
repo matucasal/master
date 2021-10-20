@@ -239,9 +239,7 @@ function newAnswer(answer, roomID) {
             logger.notice(JSON.stringify("UserID: " + winner.userID + " Name: " + winner.name));
 
             let usersLost = Object.keys(userList).filter(function (key) { return userList[key].won != true });
-
-            //Se envia el resultado
-
+            
             response.isWinner = true;
             response.winner = winner;
             response.usersLost = usersLost;
@@ -281,6 +279,7 @@ function newAnswer(answer, roomID) {
                 //newRound2.isOne2One = true;
                 //response.round = newRound2;
                 createOne2One(gamePlaying[roomID].users, roomID);
+                response.usersOne2One = Object.values(gamePlaying[roomID].users).map(function(item) { return item["userID"]; });
                 response.isOne2One = true;
                 return response;
                 break;
